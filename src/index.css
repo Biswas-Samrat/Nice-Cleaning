@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brand-pink: #E83F82;
+  --brand-pink-light: #FFF4F8;
+  --brand-pink-dark: #C92F69;
+  --blush: #FFF8FB;
+  --dark: #171717;
+  --white: #FFFFFF;
+  --soft-border: #F1D9E3;
+  --muted: #555555;
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -12,34 +23,44 @@
   }
 
   body {
-    @apply font-sans text-charcoal bg-cream antialiased;
+    @apply font-sans text-dark bg-white antialiased;
+    background-image: linear-gradient(180deg, #fff 0%, #fff8fb 100%);
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-dark;
+  }
+
+  p {
+    @apply text-dark;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-sans font-medium text-sm rounded-lg transition-all duration-200 hover:bg-charcoal-dark hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-charcoal focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-pink text-white font-sans font-medium text-sm rounded-full transition-all duration-200 hover:bg-brand-pink-dark hover:shadow-soft active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-pink/40 focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-cream border border-charcoal/20 text-charcoal font-sans font-medium text-sm rounded-lg transition-all duration-200 hover:bg-cream-200 hover:border-charcoal/40 active:scale-95 focus:outline-none focus:ring-2 focus:ring-charcoal/30 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-brand-pink/25 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:border-brand-pink hover:bg-brand-pink-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-pink/20 focus:ring-offset-2;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-white/60 text-white font-sans font-medium text-sm rounded-lg transition-all duration-200 hover:bg-white/10 hover:border-white active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-brand-pink/40 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:border-brand-pink hover:bg-brand-pink-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-pink/20 focus:ring-offset-2;
   }
 
   .btn-whatsapp {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366] text-white font-sans font-medium text-sm rounded-lg transition-all duration-200 hover:bg-[#20b858] hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366] text-white font-sans font-medium text-sm rounded-full transition-all duration-200 hover:bg-[#1fb75d] hover:shadow-md active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#25D366]/40 focus:ring-offset-2;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-charcoal font-sans font-medium text-sm rounded-lg transition-all duration-200 hover:bg-charcoal/5 active:scale-95 focus:outline-none focus:ring-2 focus:ring-charcoal/20 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:bg-brand-pink-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-pink/20 focus:ring-offset-2;
   }
 
   .section-py {
@@ -51,35 +72,51 @@
   }
 
   .card {
-    @apply bg-white rounded-xl border border-charcoal/8 shadow-sm transition-shadow duration-200 hover:shadow-md;
+    @apply bg-white rounded-[28px] border border-brand-pink/20 shadow-soft transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-pink/40;
   }
 
   .input-field {
-    @apply w-full px-4 py-3 bg-white border border-charcoal/20 rounded-lg text-charcoal placeholder-charcoal/40 font-sans text-sm transition-colors duration-200 focus:outline-none focus:border-accent-blue focus:ring-1 focus:ring-accent-blue;
+    @apply w-full px-4 py-3 bg-white border border-border rounded-2xl text-dark placeholder:text-dark/40 font-sans text-sm transition-colors duration-200 focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20;
   }
 
   .input-error {
-    @apply border-red-400 focus:border-red-400 focus:ring-red-400;
+    @apply border-red-400 focus:border-red-400 focus:ring-red-400/20;
   }
 
   .label {
-    @apply block text-sm font-medium text-charcoal mb-1.5;
+    @apply block text-sm font-medium text-dark mb-1.5;
+  }
+
+  .sparkle-badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-pink/20 bg-brand-pink-light px-3.5 py-1.5 text-[11px] font-sans font-semibold uppercase tracking-[0.2em] text-brand-pink;
   }
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #F6F2EA;
-}
-::-webkit-scrollbar-thumb {
-  background: #8EBFD1;
-  border-radius: 3px;
+  width: 8px;
 }
 
-/* Prevent layout shift from scrollbar */
+::-webkit-scrollbar-track {
+  background: #fff4f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #E83F82 0%, #F36A9B 100%);
+  border-radius: 999px;
+}
+
 html {
   scrollbar-gutter: stable;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

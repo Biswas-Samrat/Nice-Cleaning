@@ -2,43 +2,59 @@ export default function SectionHeading({
   eyebrow,
   heading,
   subheading,
-  align = 'center',
-  light = false,
-  className = '',
+  align = "center",
+  className = "",
 }) {
   const alignClasses = {
-    center: 'text-center mx-auto',
-    left: 'text-left',
-    right: 'text-right ml-auto',
-  }
+    center: "text-center mx-auto",
+    left: "text-left",
+    right: "text-right ml-auto",
+  };
 
   return (
     <div className={`max-w-3xl ${alignClasses[align]} ${className}`}>
       {eyebrow && (
         <div
-          className={`mb-4 inline-flex items-center gap-2 text-[11px] font-sans font-semibold tracking-[0.18em] uppercase ${light ? 'text-skyblue-200' : 'text-accent-blue'
-            }`}
+          className={`mb-5 inline-flex items-center gap-2.5 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-pink-500`}
         >
-          <span className="h-px w-5 bg-current opacity-60" />
+          <span className="h-1.5 w-1.5 rounded-full bg-pink-500" />
           <span>{eyebrow}</span>
+          <span className="h-px w-8 bg-pink-200" />
         </div>
       )}
 
       <h2
-        className={`font-display text-3xl sm:text-4xl lg:text-[3rem] leading-[1.05] font-medium tracking-[-0.03em] ${light ? 'text-white' : 'text-charcoal'
-          }`}
+        className="
+          font-display
+          text-3xl
+          font-semibold
+          leading-[1.08]
+          tracking-[-0.035em]
+          text-neutral-900
+          sm:text-4xl
+          lg:text-[3.2rem]
+        "
       >
         {heading}
       </h2>
 
       {subheading && (
         <p
-          className={`mt-5 max-w-2xl font-sans text-base sm:text-lg leading-8 ${align === 'center' ? 'mx-auto' : ''
-            } ${light ? 'text-white/70' : 'text-charcoal-light'}`}
+          className={`
+            mt-5
+            max-w-2xl
+            font-sans
+            text-[15px]
+            leading-7
+            text-neutral-500
+            sm:text-base
+            sm:leading-8
+            ${align === "center" ? "mx-auto" : ""}
+          `}
         >
           {subheading}
         </p>
       )}
     </div>
-  )
+  );
 }

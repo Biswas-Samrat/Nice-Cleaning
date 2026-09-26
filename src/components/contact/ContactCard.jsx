@@ -1,4 +1,4 @@
-import { Phone, MessageSquare, MapPin, Facebook } from 'lucide-react'
+import { Phone, MessageSquare, MapPin, Facebook } from "lucide-react";
 
 export default function ContactCard() {
   return (
@@ -7,7 +7,8 @@ export default function ContactCard() {
         Direct Contact Info
       </h3>
       <p className="font-sans text-sm text-charcoal/65 leading-relaxed">
-        Feel free to call, send a message on WhatsApp, or connect with Reset2Shine Cleaning on Facebook.
+        Feel free to call, send a message on WhatsApp, or connect with Sparkle &
+        Clean on Facebook.
       </p>
 
       <div className="space-y-4 pt-2">
@@ -19,13 +20,17 @@ export default function ContactCard() {
             <Phone size={18} />
           </div>
           <div>
-            <p className="text-xs text-charcoal/50 font-sans font-medium uppercase tracking-wider">Phone</p>
-            <p className="text-sm font-semibold text-charcoal font-sans">+44 7715 533186</p>
+            <p className="text-xs text-charcoal/50 font-sans font-medium uppercase tracking-wider">
+              Phone
+            </p>
+            <p className="text-sm font-semibold text-charcoal font-sans">
+              +44 7715 533186
+            </p>
           </div>
         </a>
 
         <a
-          href="https://wa.me/447715533186?text=Hi%20Abi%2C%20I%27d%20like%20to%20enquire%20about%20a%20cleaning%20service."
+          href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20enquire%20about%20a%20cleaning%20service."
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 p-3 rounded-xl hover:bg-cream transition-colors duration-150 group"
@@ -34,8 +39,12 @@ export default function ContactCard() {
             <MessageSquare size={18} />
           </div>
           <div>
-            <p className="text-xs text-charcoal/50 font-sans font-medium uppercase tracking-wider">WhatsApp</p>
-            <p className="text-sm font-semibold text-charcoal font-sans">+44 7715 533186</p>
+            <p className="text-xs text-charcoal/50 font-sans font-medium uppercase tracking-wider">
+              WhatsApp
+            </p>
+            <p className="text-sm font-semibold text-charcoal font-sans">
+              +44 7715 533186
+            </p>
           </div>
         </a>
 
@@ -44,8 +53,12 @@ export default function ContactCard() {
             <MapPin size={18} />
           </div>
           <div>
-            <p className="text-xs text-charcoal/50 font-sans font-medium uppercase tracking-wider">Location</p>
-            <p className="text-sm font-semibold text-charcoal font-sans">Harlow, United Kingdom</p>
+            <p className="text-xs text-charcoal/50 font-sans font-medium uppercase tracking-wider">
+              Location
+            </p>
+            <p className="text-sm font-semibold text-charcoal font-sans">
+              Armagh, United Kingdom
+            </p>
           </div>
         </div>
 
@@ -54,15 +67,19 @@ export default function ContactCard() {
             <Facebook size={18} />
           </div>
           <div>
-            <p className="text-xs text-charcoal/50 font-sans font-medium uppercase tracking-wider">Facebook Page</p>
-            <p className="text-sm font-semibold text-charcoal font-sans">Reset2Shine Cleaning</p>
+            <p className="text-xs text-charcoal/50 font-sans font-medium uppercase tracking-wider">
+              Facebook Page
+            </p>
+            <p className="text-sm font-semibold text-charcoal font-sans">
+              Sparkle & Clean
+            </p>
           </div>
         </div>
       </div>
 
       <div className="pt-4 border-t border-charcoal/6 text-xs text-charcoal/50 font-sans leading-relaxed">
-        Serving Harlow, Sawbridgeworth, Bishop's Stortford, Epping, Ware, Hertford, North Weald & Pickeridge.
+        Serving Armagh and nearby communities across the local area.
       </div>
     </div>
-  )
+  );
 }

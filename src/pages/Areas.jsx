@@ -1,46 +1,47 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight, MapPin, MessageSquare } from 'lucide-react'
-import AnnouncementBar from '../components/layout/AnnouncementBar'
-import Navbar from '../components/layout/Navbar'
-import Footer from '../components/layout/Footer'
-import MobileContactBar from '../components/layout/MobileContactBar'
-import BackToTopButton from '../components/common/BackToTopButton'
-import CTASection from '../components/common/CTASection'
-import Breadcrumb from '../components/common/Breadcrumb'
-import AreasList from '../components/areas/AreasList'
+import { Link } from "react-router-dom";
+import { ArrowRight, MapPin, MessageSquare } from "lucide-react";
+import AnnouncementBar from "../components/layout/AnnouncementBar";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import MobileContactBar from "../components/layout/MobileContactBar";
+import BackToTopButton from "../components/common/BackToTopButton";
+import CTASection from "../components/common/CTASection";
+import Breadcrumb from "../components/common/Breadcrumb";
+import AreasList from "../components/areas/AreasList";
 
 export default function Areas() {
   return (
     <>
-      <title>Areas We Cover | Reset2Shine Cleaning Harlow</title>
+      <title>Areas We Cover | Sparkle & Clean</title>
       <AnnouncementBar />
       <Navbar />
       <main>
         {/* Page Hero */}
         <section className="bg-cream py-14 sm:py-16 border-b border-charcoal/6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Breadcrumb items={[{ label: 'Areas We Cover' }]} />
+            <Breadcrumb items={[{ label: "Areas We Cover" }]} />
             <div className="mt-6 max-w-3xl">
               <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 font-sans">
                 Local Coverage
               </p>
               <h1 className="font-display text-4xl sm:text-5xl font-medium text-charcoal mb-4 leading-tight">
-                Serving Harlow & Surrounding Areas
+                Serving Armagh & Surrounding Areas
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed mb-6">
-                Reset2Shine Cleaning provides reliable residential and specialist cleaning services across Harlow and neighbouring towns and villages.
+                Sparkle & Clean provides reliable home cleaning services across
+                Armagh and neighbouring local communities.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/request-quote" className="btn-primary">
                   Check Availability & Get a Quote <ArrowRight size={16} />
                 </Link>
                 <a
-                  href="https://wa.me/447715533186?text=Hi%20Abi%2C%20I%27d%20like%20to%20check%20if%20you%20cover%20my%20area."
+                  href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20check%20if%20you%20cover%20my%20area."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp"
                 >
-                  WhatsApp Abi
+                  WhatsApp Us
                 </a>
               </div>
             </div>
@@ -55,7 +56,8 @@ export default function Areas() {
                 Our Primary Service Locations
               </h2>
               <p className="font-sans text-sm text-charcoal/65">
-                Click any location or request a quote to check if we can visit your area.
+                Click any location or request a quote to check if we can visit
+                your area.
               </p>
             </div>
 
@@ -71,7 +73,8 @@ export default function Areas() {
                     Not sure if we cover your area?
                   </h3>
                   <p className="font-sans text-sm text-charcoal/65">
-                    Get in touch with Abi to check availability for your postcode in or around Essex & Hertfordshire.
+                    Get in touch to check availability for your local area
+                    around Armagh and nearby communities.
                   </p>
                 </div>
               </div>
@@ -80,7 +83,7 @@ export default function Areas() {
                   Request a Quote
                 </Link>
                 <a
-                  href="https://wa.me/447715533186?text=Hi%20Abi%2C%20I%27d%20like%20to%20check%20availability%20for%20my%20postcode."
+                  href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20check%20availability%20for%20my%20postcode."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp text-xs flex items-center gap-1.5"
@@ -99,5 +102,5 @@ export default function Areas() {
       <MobileContactBar />
       <BackToTopButton />
     </>
-  )
+  );
 }

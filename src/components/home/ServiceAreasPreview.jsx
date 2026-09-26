@@ -1,11 +1,14 @@
-import { Link } from 'react-router-dom'
-import { MapPin, ArrowRight } from 'lucide-react'
-import { areas } from '../../data/areas'
-import SectionHeading from '../common/SectionHeading'
+import { Link } from "react-router-dom";
+import { MapPin, ArrowRight } from "lucide-react";
+import { areas } from "../../data/areas";
+import SectionHeading from "../common/SectionHeading";
 
 export default function ServiceAreasPreview() {
   return (
-    <section className="bg-cream py-16 sm:py-20 lg:py-24" aria-label="Service areas">
+    <section
+      className="bg-cream py-16 sm:py-20 lg:py-24"
+      aria-label="Service areas"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
@@ -13,10 +16,12 @@ export default function ServiceAreasPreview() {
               Service Areas
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-medium text-charcoal mb-4">
-              Serving Harlow & Surrounding Areas
+              Local Cleaning Across Armagh
             </h2>
             <p className="font-sans text-base text-charcoal/65 leading-relaxed mb-8">
-              Reset2Shine Cleaning provides professional cleaning services across Harlow and nearby areas. Get in touch to check availability in your location.
+              Sparkle & Clean provides professional cleaning services across
+              Armagh and nearby local areas. Get in touch to check availability
+              in your area.
             </p>
             <Link to="/areas" className="btn-primary">
               View All Areas <ArrowRight size={15} />
@@ -29,19 +34,27 @@ export default function ServiceAreasPreview() {
                 key={area.id}
                 className={`flex items-center gap-2.5 px-4 py-3.5 rounded-xl border transition-colors duration-150 ${
                   area.isMain
-                    ? 'bg-charcoal text-white border-charcoal'
-                    : 'bg-white border-charcoal/10 text-charcoal hover:border-accent-blue/40 hover:bg-skyblue-100/50'
+                    ? "bg-charcoal text-white border-charcoal"
+                    : "bg-white border-charcoal/10 text-charcoal hover:border-accent-blue/40 hover:bg-skyblue-100/50"
                 }`}
               >
                 <MapPin
                   size={14}
-                  className={area.isMain ? 'text-accent-blue flex-shrink-0' : 'text-accent-blue flex-shrink-0'}
+                  className={
+                    area.isMain
+                      ? "text-accent-blue flex-shrink-0"
+                      : "text-accent-blue flex-shrink-0"
+                  }
                 />
-                <span className={`font-sans font-medium text-sm ${area.isMain ? 'text-white' : 'text-charcoal'}`}>
+                <span
+                  className={`font-sans font-medium text-sm ${area.isMain ? "text-white" : "text-charcoal"}`}
+                >
                   {area.name}
                 </span>
                 {area.isMain && (
-                  <span className="ml-auto text-[10px] text-white/60 font-sans">Base</span>
+                  <span className="ml-auto text-[10px] text-white/60 font-sans">
+                    Base
+                  </span>
                 )}
               </div>
             ))}
@@ -49,5 +62,5 @@ export default function ServiceAreasPreview() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,27 +1,31 @@
-import { PhoneCall, CalendarCheck, Sparkles, Home } from 'lucide-react'
+import { PhoneCall, CalendarCheck, Sparkles, Home } from "lucide-react";
 
 const steps = [
   {
     icon: PhoneCall,
-    title: '1. Get In Touch',
-    description: 'Call, message on WhatsApp, or complete our quick online quote form with your cleaning details.',
+    title: "1. Get In Touch",
+    description:
+      "Call, message on WhatsApp, or complete our quick online quote form with your cleaning details.",
   },
   {
     icon: CalendarCheck,
-    title: '2. Agree Details',
-    description: 'We discuss your specific needs, agree on convenient dates and timings, and confirm the price.',
+    title: "2. Agree Details",
+    description:
+      "We discuss your specific needs, agree on convenient dates and timings, and confirm the price.",
   },
   {
     icon: Sparkles,
-    title: '3. Professional Clean',
-    description: 'Abi arrives promptly and carries out a detailed, attentive clean of your home or vehicle.',
+    title: "3. Professional Clean",
+    description:
+      "Our team arrives promptly and carries out a detailed, attentive clean of your home.",
   },
   {
     icon: Home,
-    title: '4. Enjoy The Shine',
-    description: 'Come home to a fresh, gleaming space that smells wonderful and lightens your daily load.',
+    title: "4. Enjoy The Shine",
+    description:
+      "Come home to a fresh, gleaming space that smells wonderful and lightens your daily load.",
   },
-]
+];
 
 export default function CleaningProcess() {
   return (
@@ -41,7 +45,7 @@ export default function CleaningProcess() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => {
-            const Icon = step.icon
+            const Icon = step.icon;
             return (
               <div
                 key={index}
@@ -59,10 +63,10 @@ export default function CleaningProcess() {
                   </p>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

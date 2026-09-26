@@ -1,25 +1,25 @@
-import AnnouncementBar from '../components/layout/AnnouncementBar'
-import Navbar from '../components/layout/Navbar'
-import Footer from '../components/layout/Footer'
-import MobileContactBar from '../components/layout/MobileContactBar'
-import BackToTopButton from '../components/common/BackToTopButton'
-import Breadcrumb from '../components/common/Breadcrumb'
-import QuoteForm from '../components/contact/QuoteForm'
-import ContactCard from '../components/contact/ContactCard'
-import { ShieldCheck, Clock, ThumbsUp, MapPin } from 'lucide-react'
-import { areas } from '../data/areas'
+import AnnouncementBar from "../components/layout/AnnouncementBar";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import MobileContactBar from "../components/layout/MobileContactBar";
+import BackToTopButton from "../components/common/BackToTopButton";
+import Breadcrumb from "../components/common/Breadcrumb";
+import QuoteForm from "../components/contact/QuoteForm";
+import ContactCard from "../components/contact/ContactCard";
+import { ShieldCheck, Clock, ThumbsUp, MapPin } from "lucide-react";
+import { areas } from "../data/areas";
 
 export default function RequestQuote() {
   return (
     <>
-      <title>Request a Quote | Reset2Shine Cleaning Harlow</title>
+      <title>Request a Quote | Sparkle & Clean</title>
       <AnnouncementBar />
       <Navbar />
       <main>
         {/* Hero */}
         <section className="bg-cream py-14 sm:py-16 border-b border-charcoal/6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Breadcrumb items={[{ label: 'Request a Quote' }]} />
+            <Breadcrumb items={[{ label: "Request a Quote" }]} />
             <div className="mt-6 max-w-2xl">
               <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 font-sans">
                 Free & No Obligation
@@ -28,7 +28,8 @@ export default function RequestQuote() {
                 Request a Cleaning Quote
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed">
-                Tell Reset2Shine what you need cleaned and we'll be in touch to confirm availability and pricing.
+                Tell Sparkle & Clean what you need cleaned and we'll be in touch
+                to confirm availability and pricing.
               </p>
             </div>
           </div>
@@ -46,7 +47,7 @@ export default function RequestQuote() {
                 {/* Why Choose Us Card */}
                 <div className="bg-white rounded-2xl border border-charcoal/8 p-6 space-y-4 shadow-sm">
                   <h3 className="font-display font-medium text-lg text-charcoal mb-2">
-                    Why Customers Choose Reset2Shine
+                    Why Customers Choose Sparkle & Clean
                   </h3>
 
                   <div className="flex items-start gap-3">
@@ -54,8 +55,12 @@ export default function RequestQuote() {
                       <ThumbsUp size={16} />
                     </div>
                     <div>
-                      <p className="font-sans font-semibold text-xs text-charcoal">100% Recommended</p>
-                      <p className="font-sans text-xs text-charcoal/60 leading-relaxed">14 Facebook recommendations</p>
+                      <p className="font-sans font-semibold text-xs text-charcoal">
+                        100% Recommended
+                      </p>
+                      <p className="font-sans text-xs text-charcoal/60 leading-relaxed">
+                        14 Facebook recommendations
+                      </p>
                     </div>
                   </div>
 
@@ -64,8 +69,12 @@ export default function RequestQuote() {
                       <Clock size={16} />
                     </div>
                     <div>
-                      <p className="font-sans font-semibold text-xs text-charcoal">Fast Response</p>
-                      <p className="font-sans text-xs text-charcoal/60 leading-relaxed">Reply via your chosen contact method</p>
+                      <p className="font-sans font-semibold text-xs text-charcoal">
+                        Fast Response
+                      </p>
+                      <p className="font-sans text-xs text-charcoal/60 leading-relaxed">
+                        Reply via your chosen contact method
+                      </p>
                     </div>
                   </div>
 
@@ -74,8 +83,12 @@ export default function RequestQuote() {
                       <ShieldCheck size={16} />
                     </div>
                     <div>
-                      <p className="font-sans font-semibold text-xs text-charcoal">Personal Care</p>
-                      <p className="font-sans text-xs text-charcoal/60 leading-relaxed">Respectful, friendly and non-judgemental cleaning</p>
+                      <p className="font-sans font-semibold text-xs text-charcoal">
+                        Personal Care
+                      </p>
+                      <p className="font-sans text-xs text-charcoal/60 leading-relaxed">
+                        Respectful, friendly and non-judgemental cleaning
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -88,12 +101,15 @@ export default function RequestQuote() {
                   <div className="flex items-center gap-2 mb-3">
                     <MapPin size={18} className="text-accent-blue" />
                     <h3 className="font-display font-medium text-base text-charcoal">
-                      Serving Harlow & Nearby
+                      Serving Armagh & Nearby
                     </h3>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
-                    {areas.map(a => (
-                      <span key={a.id} className="text-xs bg-cream px-2.5 py-1 rounded-md text-charcoal/70 font-sans border border-charcoal/6">
+                    {areas.map((a) => (
+                      <span
+                        key={a.id}
+                        className="text-xs bg-cream px-2.5 py-1 rounded-md text-charcoal/70 font-sans border border-charcoal/6"
+                      >
                         {a.name}
                       </span>
                     ))}
@@ -108,5 +124,5 @@ export default function RequestQuote() {
       <MobileContactBar />
       <BackToTopButton />
     </>
-  )
+  );
 }

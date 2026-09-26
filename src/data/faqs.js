@@ -1,62 +1,62 @@
 export const faqs = [
   {
     id: 1,
-    question: 'Which areas do you cover?',
-    answer: 'Reset2Shine Cleaning serves Harlow and the surrounding areas including North Weald, Sawbridgeworth, Bishop\'s Stortford, Epping, Pickeridge, Ware and Hertford. If you\'re unsure whether your area is covered, please get in touch and we\'ll be happy to help.',
+    question: "What areas do you cover?",
+    answer:
+      "Sparkle & Clean serves Armagh and surrounding areas, including Newry, Portadown and Benburb, along with nearby local communities. If you are unsure whether your area is covered, just get in touch and we can confirm availability.",
   },
   {
     id: 2,
-    question: 'What cleaning services do you offer?',
-    answer: 'Reset2Shine offers a range of professional cleaning services including regular house cleaning, specialist oven cleaning, car cleaning, end-of-tenancy cleaning and move-in cleaning. Each service is carried out with care and attention to detail.',
+    question: "What cleaning services do you offer?",
+    answer:
+      "We offer regular cleans, deep cleans, one-off cleans, fridge and freezer cleaning and window cleaning. Every service is tailored to your home and your priorities.",
   },
   {
     id: 3,
-    question: 'How much does house cleaning cost?',
-    answer: 'House cleaning is priced at £16 per hour. The total cost will depend on the size of your home and the work required. Please get in touch to discuss your specific requirements and we\'ll be happy to advise.',
+    question: "What is included in a regular clean?",
+    answer:
+      "A regular clean usually includes the standard home refresh you need to keep your space feeling tidy, comfortable and welcoming. It can be tailored to your routine and the areas you want attention on most.",
   },
   {
     id: 4,
-    question: 'How much does an oven clean cost?',
-    answer: 'Oven cleaning is a fixed price of £60. This covers a professional, thorough oven clean to restore your appliance to a fresh, clean condition.',
+    question: "What is included in a deep clean?",
+    answer:
+      "A deep clean focuses on the areas that often get overlooked, such as taps, shower fittings, shower heads, limescale build-up, window frames, corners, edges, woodwork, skirting boards, door frames, light fittings, kitchen cupboards, kickboards, stairs and other detailed areas.",
   },
   {
     id: 5,
-    question: 'How much does a car clean cost?',
-    answer: 'Car cleaning is a fixed price of £70. This includes a professional clean to leave your vehicle feeling fresh and well-maintained.',
+    question: "Can I book a one-off clean?",
+    answer:
+      "Yes. One-off cleans are a great option when your home needs a reset, a refresh, or a little extra help and you want a fresh feeling without a regular routine.",
   },
   {
     id: 6,
-    question: 'How are end-of-tenancy cleans priced?',
-    answer: 'End-of-tenancy cleaning is assessed individually. Reset2Shine will need to view the property first in order to provide an accurate quote. Please get in touch to arrange an assessment.',
+    question: "Do you clean fridges and freezers?",
+    answer:
+      "Yes. Fridge and freezer cleaning is available, with a focus on leaving the appliance fresh, hygienic and sparkling clean.",
   },
   {
     id: 7,
-    question: 'How are move-in cleans priced?',
-    answer: 'Move-in cleaning is also assessed individually, as each property is different. Reset2Shine will view the property first and then provide a personalised quote. Please get in touch to find out more.',
+    question: "Do you offer window cleaning?",
+    answer:
+      "Yes, window cleaning is available as part of our service offering for homes that want a brighter, fresher finish.",
   },
   {
     id: 8,
-    question: 'Can I request a quote?',
-    answer: 'Yes, absolutely. You can request a quote using the form on the Request a Quote page, or by contacting Reset2Shine directly by phone, WhatsApp or Facebook. We\'re happy to discuss your requirements.',
+    question: "How do I book?",
+    answer:
+      "You can send an enquiry through the form on this website or message Sparkle & Clean directly to discuss your home, date and service requirements.",
   },
   {
     id: 9,
-    question: 'Can I contact you on WhatsApp?',
-    answer: 'Yes. Reset2Shine is available on WhatsApp at +44 7715 533186. You\'re welcome to send a message with your requirements and we\'ll get back to you as soon as possible.',
+    question: "Can I send photos before booking?",
+    answer:
+      "Yes, sending photos can help when you want to show a specific area, appliance or requirement. We are happy to review them before confirming the best service for your home.",
   },
   {
     id: 10,
-    question: 'Can I request a specific cleaning date?',
-    answer: 'Please get in touch with Reset2Shine to discuss available dates. You can include your preferred date and time when you send a quote request or message directly.',
+    question: "How do I contact Sparkle & Clean?",
+    answer:
+      "You can message us on Facebook or use the contact form on this website. We are always happy to talk through your cleaning needs and availability.",
   },
-  {
-    id: 11,
-    question: 'Can I send photos of what needs cleaning?',
-    answer: 'Yes, you\'re welcome to send photos of the area or item you\'d like cleaned. This can be very helpful when quoting for oven, car, end-of-tenancy or move-in cleaning. You can send photos via WhatsApp or include them in the quote request form.',
-  },
-  {
-    id: 12,
-    question: 'How can I contact Reset2Shine?',
-    answer: 'You can contact Reset2Shine Cleaning by phone or WhatsApp on +44 7715 533186, through the Facebook page "Reset2Shine Cleaning", or by using the contact form on this website.',
-  },
-]
+];

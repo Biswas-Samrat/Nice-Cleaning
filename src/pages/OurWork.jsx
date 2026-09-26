@@ -1,25 +1,25 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight, MessageSquare, Sparkles } from 'lucide-react'
-import AnnouncementBar from '../components/layout/AnnouncementBar'
-import Navbar from '../components/layout/Navbar'
-import Footer from '../components/layout/Footer'
-import MobileContactBar from '../components/layout/MobileContactBar'
-import BackToTopButton from '../components/common/BackToTopButton'
-import Breadcrumb from '../components/common/Breadcrumb'
-import SectionHeading from '../components/common/SectionHeading'
-import WorkGrid from '../components/work/WorkGrid'
+import { Link } from "react-router-dom";
+import { ArrowRight, MessageSquare, Sparkles } from "lucide-react";
+import AnnouncementBar from "../components/layout/AnnouncementBar";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import MobileContactBar from "../components/layout/MobileContactBar";
+import BackToTopButton from "../components/common/BackToTopButton";
+import Breadcrumb from "../components/common/Breadcrumb";
+import SectionHeading from "../components/common/SectionHeading";
+import WorkGrid from "../components/work/WorkGrid";
 
 export default function OurWork() {
   return (
     <>
-      <title>Our Work | Before & After Transformations | Reset2Shine Cleaning</title>
+      <title>Our Work | Before & After Transformations | Sparkle & Clean</title>
       <AnnouncementBar />
       <Navbar />
       <main>
         {/* Page Hero */}
         <section className="bg-cream py-14 sm:py-16 lg:py-20 border-b border-charcoal/6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Breadcrumb items={[{ label: 'Our Work' }]} />
+            <Breadcrumb items={[{ label: "Our Work" }]} />
             <div className="mt-6 max-w-3xl">
               <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 font-sans">
                 Our Work
@@ -28,20 +28,21 @@ export default function OurWork() {
                 See The Difference
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed mb-8">
-                Take a look at some of the cleaning transformations from Reset2Shine Cleaning. Drag the slider to compare each space before and after.
+                Take a look at some of the cleaning transformations from Sparkle
+                & Clean. Drag the slider to compare each space before and after.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/request-quote" className="btn-primary">
                   Request a Quote <ArrowRight size={16} />
                 </Link>
                 <a
-                  href="https://wa.me/447715533186?text=Hi%20Abi%2C%20I%27ve%20seen%20your%20before%20and%20after%20work%20and%20would%20like%20to%20enquire."
+                  href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27ve%20seen%20your%20before%20and%20after%20work%20and%20would%20like%20to%20enquire."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp"
                 >
                   <MessageSquare size={16} />
-                  WhatsApp Abi
+                  WhatsApp Us
                 </a>
               </div>
             </div>
@@ -76,7 +77,8 @@ export default function OurWork() {
               Every Detail Matters
             </h2>
             <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed max-w-2xl mx-auto">
-              Reset2Shine focuses on careful, professional cleaning that leaves your space feeling fresh, cared for and ready to enjoy.
+              Sparkle & Clean focuses on careful, professional cleaning that
+              leaves your space feeling fresh, cared for and ready to enjoy.
             </p>
           </div>
         </section>
@@ -91,20 +93,20 @@ export default function OurWork() {
               Ready to Make Your Space Shine?
             </h2>
             <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed max-w-xl mx-auto mb-8">
-              Tell Reset2Shine what you need cleaned and get in touch today.
+              Tell Sparkle & Clean what you need cleaned and get in touch today.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/request-quote" className="btn-primary">
                 Request a Quote <ArrowRight size={16} />
               </Link>
               <a
-                href="https://wa.me/447715533186?text=Hi%20Abi%2C%20I%27d%20like%20to%20enquire%20about%20a%20clean."
+                href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20enquire%20about%20a%20clean."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp"
               >
                 <MessageSquare size={16} />
-                WhatsApp Abi
+                WhatsApp Us
               </a>
             </div>
           </div>
@@ -114,5 +116,5 @@ export default function OurWork() {
       <MobileContactBar />
       <BackToTopButton />
     </>
-  )
+  );
 }

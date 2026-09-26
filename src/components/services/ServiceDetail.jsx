@@ -1,29 +1,29 @@
-import { Link } from 'react-router-dom'
-import { Check, ArrowRight } from 'lucide-react'
-import { serviceIcons } from '../../data/services'
+import { Link } from "react-router-dom";
+import { Check, ArrowRight } from "lucide-react";
+import { serviceIcons } from "../../data/services";
 
 export default function ServiceDetail({ service, isReversed }) {
-  const Icon = serviceIcons[service.icon]
+  const Icon = serviceIcons[service.icon];
 
   return (
     <div
       id={service.id}
       className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
-        isReversed ? 'lg:flex lg:flex-row-reverse' : ''
+        isReversed ? "lg:flex lg:flex-row-reverse" : ""
       }`}
     >
-      <div className={isReversed ? 'lg:order-2' : ''}>
+      <div className={isReversed ? "lg:order-2" : ""}>
         <div className="rounded-2xl overflow-hidden shadow-sm border border-charcoal/8 relative group">
           <img
             src={service.image}
-            alt={`${service.title} - Reset2Shine Cleaning`}
+            alt={`${service.title} - Sparkle & Clean`}
             className="w-full h-[320px] sm:h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
         </div>
       </div>
 
-      <div className={isReversed ? 'lg:order-1' : ''}>
+      <div className={isReversed ? "lg:order-1" : ""}>
         <div className="w-10 h-10 rounded-xl bg-skyblue-100 text-accent-blue flex items-center justify-center mb-4">
           {Icon && <Icon size={20} />}
         </div>
@@ -42,7 +42,10 @@ export default function ServiceDetail({ service, isReversed }) {
               </h3>
               <ul className="space-y-2">
                 {service.suitableFor.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm text-charcoal/70 font-sans">
+                  <li
+                    key={idx}
+                    className="flex items-center gap-2 text-sm text-charcoal/70 font-sans"
+                  >
                     <span className="w-1.5 h-1.5 rounded-full bg-accent-blue flex-shrink-0" />
                     {item}
                   </li>
@@ -58,8 +61,14 @@ export default function ServiceDetail({ service, isReversed }) {
               </h3>
               <ul className="space-y-2">
                 {service.benefits.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm text-charcoal/70 font-sans">
-                    <Check size={14} className="text-accent-sage flex-shrink-0" />
+                  <li
+                    key={idx}
+                    className="flex items-center gap-2 text-sm text-charcoal/70 font-sans"
+                  >
+                    <Check
+                      size={14}
+                      className="text-accent-sage flex-shrink-0"
+                    />
                     {item}
                   </li>
                 ))}
@@ -73,10 +82,10 @@ export default function ServiceDetail({ service, isReversed }) {
             Request a Quote <ArrowRight size={16} />
           </Link>
           <span className="font-sans font-semibold text-charcoal text-sm bg-white px-3 py-1.5 rounded-lg border border-charcoal/10">
-            {service.price} {service.priceNote ? `(${service.priceNote})` : ''}
+            {service.price} {service.priceNote ? `(${service.priceNote})` : ""}
           </span>
         </div>
       </div>
     </div>
-  )
+  );
 }
