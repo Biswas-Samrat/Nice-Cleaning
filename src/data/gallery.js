@@ -1,0 +1,88 @@
+export const galleryItems = [
+  {
+    id: 1,
+    title: 'Spotless Kitchen',
+    category: 'House Cleaning',
+    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
+    alt: 'Clean bright kitchen after professional house cleaning',
+  },
+  {
+    id: 2,
+    title: 'Gleaming Oven',
+    category: 'Oven Cleaning',
+    image: 'https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?w=800&q=80',
+    alt: 'Oven cleaned to a professional standard',
+  },
+  {
+    id: 3,
+    title: 'Fresh Living Room',
+    category: 'House Cleaning',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80',
+    alt: 'Freshly cleaned living room',
+  },
+  {
+    id: 4,
+    title: 'Clean Bathroom',
+    category: 'House Cleaning',
+    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80',
+    alt: 'Professional bathroom cleaning result',
+  },
+  {
+    id: 5,
+    title: 'Polished Car Interior',
+    category: 'Car Cleaning',
+    image: 'https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&q=80',
+    alt: 'Clean car interior after professional car cleaning',
+  },
+  {
+    id: 6,
+    title: 'End of Tenancy Result',
+    category: 'End of Tenancy',
+    image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80',
+    alt: 'Property cleaned for end of tenancy inspection',
+  },
+  {
+    id: 7,
+    title: 'Sparkling Kitchen',
+    category: 'Deep Cleaning',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    alt: 'Deep cleaned kitchen sparkling clean',
+  },
+  {
+    id: 8,
+    title: 'Clean Bedroom',
+    category: 'House Cleaning',
+    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80',
+    alt: 'Freshly cleaned and tidied bedroom',
+  },
+  {
+    id: 9,
+    title: 'Shining Hob',
+    category: 'Oven Cleaning',
+    image: 'https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800&q=80',
+    alt: 'Cleaned hob and cooktop',
+  },
+  {
+    id: 10,
+    title: 'Car Exterior',
+    category: 'Car Cleaning',
+    image: 'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=800&q=80',
+    alt: 'Cleaned car exterior looking fresh',
+  },
+  {
+    id: 11,
+    title: 'Clean Hallway',
+    category: 'End of Tenancy',
+    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80',
+    alt: 'Clean hallway after end of tenancy clean',
+  },
+  {
+    id: 12,
+    title: 'Bright Clean Home',
+    category: 'Deep Cleaning',
+    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&q=80',
+    alt: 'Home interior after deep cleaning',
+  },
+]
+
+export const galleryCategories = ['All', 'House Cleaning', 'Oven Cleaning', 'Car Cleaning', 'End of Tenancy', 'Deep Cleaning']
