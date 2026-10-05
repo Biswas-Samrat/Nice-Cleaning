@@ -8,11 +8,12 @@ import BackToTopButton from "../components/common/BackToTopButton";
 import Breadcrumb from "../components/common/Breadcrumb";
 import SectionHeading from "../components/common/SectionHeading";
 import WorkGrid from "../components/work/WorkGrid";
+import { createWhatsAppUrl } from "../data/contact";
 
 export default function OurWork() {
   return (
     <>
-      <title>Our Work | Before & After Transformations | Sparkle & Clean</title>
+      <title>Our Work | Before & After | Nice Cleaning</title>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -21,22 +22,25 @@ export default function OurWork() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumb items={[{ label: "Our Work" }]} />
             <div className="mt-6 max-w-3xl">
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 font-sans">
+              <p className="text-xs font-semibold tracking-widest uppercase text-brand-purple mb-3 font-sans">
                 Our Work
               </p>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium text-charcoal mb-4 leading-tight">
-                See The Difference
+                See the Difference
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed mb-8">
-                Take a look at some of the cleaning transformations from Sparkle
-                & Clean. Drag the slider to compare each space before and after.
+                Take a look at cleaning transformations and see the difference a
+                detailed, professional clean can make. Drag the slider to
+                compare.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/request-quote" className="btn-primary">
                   Request a Quote <ArrowRight size={16} />
                 </Link>
                 <a
-                  href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27ve%20seen%20your%20before%20and%20after%20work%20and%20would%20like%20to%20enquire."
+                  href={createWhatsAppUrl(
+                    "Hi Nice Cleaning, I've seen your before and after work and would like to enquire.",
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp"
@@ -67,40 +71,42 @@ export default function OurWork() {
         {/* Trust / Explanation */}
         <section className="bg-cream py-16 sm:py-20 border-t border-charcoal/6">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="w-12 h-12 rounded-2xl bg-skyblue-100 text-accent-blue flex items-center justify-center mx-auto mb-4">
+            <div className="w-12 h-12 rounded-2xl bg-brand-teal-light text-brand-purple flex items-center justify-center mx-auto mb-4">
               <Sparkles size={24} />
             </div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent-blue font-sans mb-2">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-purple font-sans mb-2">
               Thoughtful Cleaning
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-medium text-charcoal mb-4">
               Every Detail Matters
             </h2>
             <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed max-w-2xl mx-auto">
-              Sparkle & Clean focuses on careful, professional cleaning that
-              leaves your space feeling fresh, cared for and ready to enjoy.
+              Nice Cleaning focuses on a careful, professional clean that helps
+              your space feel fresh and ready to enjoy.
             </p>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="bg-skyblue-100 py-16 sm:py-20">
+        <section className="bg-brand-teal-light py-16 sm:py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent-blue font-sans mb-2">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-purple font-sans mb-2">
               Get In Touch
             </p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-charcoal mb-4">
               Ready to Make Your Space Shine?
             </h2>
             <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed max-w-xl mx-auto mb-8">
-              Tell Sparkle & Clean what you need cleaned and get in touch today.
+              Tell Nice Cleaning what you need and get in touch today.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/request-quote" className="btn-primary">
                 Request a Quote <ArrowRight size={16} />
               </Link>
               <a
-                href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20enquire%20about%20a%20clean."
+                href={createWhatsAppUrl(
+                  "Hi Nice Cleaning, I'd like to enquire about a clean.",
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp"

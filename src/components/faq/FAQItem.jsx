@@ -9,7 +9,7 @@ export default function FAQItem({ question, answer, defaultOpen = false }) {
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
-        className="w-full flex items-center justify-between px-5 sm:px-6 py-4 sm:py-5 text-left hover:bg-charcoal/2 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue/30"
+        className="w-full flex items-center justify-between px-5 sm:px-6 py-4 sm:py-5 text-left hover:bg-charcoal/2 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-purple/30"
       >
         <span className="font-sans font-medium text-charcoal text-sm sm:text-base pr-4 leading-snug">
           {question}

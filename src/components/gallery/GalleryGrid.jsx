@@ -34,7 +34,7 @@ export default function GalleryGrid() {
             key={cat}
             onClick={() => setActiveCategory(cat)}
             aria-pressed={activeCategory === cat}
-            className={`px-4 py-2 rounded-full text-sm font-medium font-sans transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-accent-blue/40 ${
+            className={`px-4 py-2 rounded-full text-sm font-medium font-sans transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-brand-purple/40 ${
               activeCategory === cat
                 ? 'bg-charcoal text-white'
                 : 'bg-white border border-charcoal/10 text-charcoal/70 hover:border-charcoal/30 hover:text-charcoal'
@@ -51,7 +51,7 @@ export default function GalleryGrid() {
           <button
             key={item.id}
             onClick={() => handleOpen(item)}
-            className="group block w-full rounded-xl overflow-hidden relative focus:outline-none focus:ring-2 focus:ring-accent-blue focus:ring-offset-2"
+            className="group block w-full rounded-xl overflow-hidden relative focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2"
             aria-label={`View ${item.title}`}
           >
             <img

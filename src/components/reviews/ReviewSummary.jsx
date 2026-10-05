@@ -1,5 +1,5 @@
-import { Facebook, Star, CheckCircle } from 'lucide-react'
-import { reviewSummary } from '../../data/reviews'
+import { Facebook, CheckCircle } from "lucide-react";
+import { reviewSummary } from "../../data/reviews";
 
 export default function ReviewSummary() {
   return (
@@ -10,22 +10,19 @@ export default function ReviewSummary() {
         </div>
         <div>
           <div className="flex items-center gap-2 justify-center sm:justify-start">
-            <span className="font-display text-2xl font-bold text-charcoal">100%</span>
-            <span className="font-sans text-xs font-semibold uppercase tracking-wider text-accent-sage bg-accent-sage/10 px-2 py-0.5 rounded-full flex items-center gap-1">
+            <span className="font-display text-2xl font-bold text-charcoal">
+              100%
+            </span>
+            <span className="font-sans text-xs font-semibold uppercase tracking-wider text-brand-teal bg-brand-teal/10 px-2 py-0.5 rounded-full flex items-center gap-1">
               <CheckCircle size={12} /> Recommended
             </span>
           </div>
           <p className="font-sans text-sm text-charcoal/65 mt-0.5">
-            Based on {reviewSummary.total} customer recommendations on Facebook
+            Nice Cleaning is rated {reviewSummary.recommendPercent}% recommended
+            on Facebook, based on {reviewSummary.total} reviews.
           </p>
         </div>
       </div>
-
-      <div className="flex items-center gap-1 text-accent-gold">
-        {[...Array(5)].map((_, i) => (
-          <Star key={i} size={22} fill="currentColor" stroke="none" />
-        ))}
-      </div>
     </div>
-  )
+  );
 }

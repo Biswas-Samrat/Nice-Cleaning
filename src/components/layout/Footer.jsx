@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { Phone, MapPin, Facebook } from "lucide-react";
+import {
+  businessAddress,
+  businessPhone,
+  businessPhoneLink,
+  facebookHandle,
+  facebookPageUrl,
+  createWhatsAppUrl,
+} from "../../data/contact";
 
 const quickLinks = [
   { to: "/", label: "Home" },
@@ -12,17 +20,12 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  { to: "/services#regular-cleans", label: "Regular Cleans" },
+  { to: "/services#house-cleans", label: "House Cleans" },
   { to: "/services#deep-cleans", label: "Deep Cleans" },
-  { to: "/services#one-off-cleans", label: "One-Off Cleans" },
-  {
-    to: "/services#fridge-freezer-cleaning",
-    label: "Fridge & Freezer Cleaning",
-  },
-  { to: "/services#window-cleaning", label: "Window Cleaning" },
+  { to: "/services#end-of-tenancy-cleans", label: "End of Tenancy Cleans" },
 ];
 
-const areas = ["Armagh", "Newry", "Portadown", "Benburb"];
+const areas = ["Newport", "Bassaleg", "Langstone", "Risca", "Rogerstone"];
 
 export default function Footer() {
   return (
@@ -32,35 +35,35 @@ export default function Footer() {
         <div className="py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Logo variant="light" size="md" />
+            <Logo size="md" />
             <p className="mt-4 text-sm text-black/70 leading-relaxed font-sans max-w-xs">
-              Friendly, professional cleaning services for homes across Armagh
-              and surrounding areas. Reliable, personal and caring.
+              Friendly, professional cleaning across Newport, Gwent and
+              surrounding areas. Less Chores. More Life.
             </p>
             <div className="mt-5 flex items-center gap-1.5 text-sm text-black/70">
-              <MapPin size={14} className="text-accent-blue flex-shrink-0" />
-              <span>Armagh, United Kingdom</span>
+              <MapPin size={14} className="text-brand-purple flex-shrink-0" />
+              <span>{businessAddress}</span>
             </div>
             <div className="mt-3 flex items-center gap-1.5">
-              <Phone size={14} className="text-accent-blue flex-shrink-0" />
+              <Phone size={14} className="text-brand-purple flex-shrink-0" />
               <a
-                href="tel:+447715533186"
+                href={businessPhoneLink}
                 className="text-sm text-black/70 hover:text-black transition-colors duration-150"
               >
-                +44 7715 533186
+                {businessPhone}
               </a>
             </div>
             {/* Social */}
             <div className="mt-5">
               <a
-                href="https://www.facebook.com"
+                href={facebookPageUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Sparkle & Clean on Facebook"
+                aria-label="Nice Cleaning on Facebook"
                 className="inline-flex items-center gap-2 text-sm text-black/70 hover:text-black transition-colors duration-150"
               >
                 <Facebook size={16} className="text-[#4267B2]" />
-                Sparkle & Clean
+                {facebookHandle}
               </a>
             </div>
           </div>
@@ -123,7 +126,7 @@ export default function Footer() {
 
             <div className="mt-6 space-y-2">
               <a
-                href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20enquire%20about%20a%20cleaning%20service."
+                href={createWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full justify-center py-2 text-xs"
@@ -139,7 +142,7 @@ export default function Footer() {
                 WhatsApp
               </a>
               <a
-                href="tel:+447715533186"
+                href={businessPhoneLink}
                 className="flex items-center justify-center gap-1.5 w-full py-2 px-4 border border-black/20 rounded-lg text-xs font-sans font-medium text-black/70 hover:text-black hover:border-black/40 transition-colors duration-150"
               >
                 <Phone size={13} />
@@ -151,8 +154,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="py-5 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-black/60 font-sans">
-          <p>© 2026 Sparkle & Clean. All rights reserved.</p>
-          <p>Professional cleaning services in Armagh & surrounding areas</p>
+          <p>© 2026 Nice Cleaning. All rights reserved.</p>
+          <p>Less Chores. More Life.</p>
         </div>
       </div>
     </footer>

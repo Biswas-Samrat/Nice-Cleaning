@@ -18,7 +18,7 @@ import CTASection from "../components/common/CTASection";
 export default function Home() {
   return (
     <>
-      <title>Sparkle & Clean | Professional Cleaning Services in Armagh</title>
+      <title>Nice Cleaning | House Cleaning in Newport, Gwent</title>
       <AnnouncementBar />
       <Navbar />
       <main id="main-content">
@@ -34,7 +34,7 @@ export default function Home() {
         <FAQPreview />
         <CTASection
           heading="Ready to Make Your Space Shine?"
-          subheading="Whether you need a regular home clean, a one-off refresh or help with detailed deep cleaning, get in touch with Sparkle & Clean."
+          subheading="House Cleans, Deep Cleans and End of Tenancy Cleans across Newport, Gwent and surrounding areas."
         />
       </main>
       <Footer />

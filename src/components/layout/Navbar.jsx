@@ -4,13 +4,18 @@ import { useScrollPosition } from "../../hooks/useScrollPosition";
 import { useMobileMenu } from "../../hooks/useMobileMenu";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
+import {
+  businessPhone,
+  businessPhoneLink,
+  createWhatsAppUrl,
+} from "../../data/contact";
 
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
   { to: "/our-work", label: "Our Work" },
   { to: "/gallery", label: "Gallery" },
-  { to: "/areas", label: "Areas" },
+  { to: "/areas", label: "Areas We Cover" },
 ];
 
 export default function Navbar() {
@@ -30,7 +35,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-18">
             {/* Logo */}
-            <Link to="/" aria-label="Sparkle & Clean - Home">
+            <Link to="/" aria-label="Nice Cleaning - Home">
               <Logo size="md" />
             </Link>
 
@@ -47,7 +52,7 @@ export default function Navbar() {
                     to={link.to}
                     className={`px-3.5 py-2 rounded-lg font-sans font-medium text-sm transition-colors duration-150 ${
                       isActive
-                        ? "text-accent-blue bg-skyblue-100"
+                        ? "text-brand-purple bg-brand-teal-light"
                         : "text-charcoal/70 hover:text-charcoal hover:bg-charcoal/5"
                     }`}
                   >
@@ -60,19 +65,19 @@ export default function Navbar() {
             {/* Desktop CTAs */}
             <div className="hidden lg:flex items-center gap-3">
               <a
-                href="tel:+447715533186"
+                href={businessPhoneLink}
                 className="flex items-center gap-1.5 text-sm text-charcoal/60 hover:text-charcoal font-medium transition-colors duration-150 px-2"
-                aria-label="Call Sparkle & Clean"
+                aria-label="Call Nice Cleaning"
               >
                 <Phone size={15} />
-                <span className="hidden xl:inline">+44 7715 533186</span>
+                <span className="hidden xl:inline">{businessPhone}</span>
               </a>
               <a
-                href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20enquire%20about%20a%20cleaning%20service."
+                href={createWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp py-2 px-4 text-xs"
-                aria-label="WhatsApp Sparkle & Clean"
+                aria-label="WhatsApp Nice Cleaning"
               >
                 <svg
                   viewBox="0 0 24 24"

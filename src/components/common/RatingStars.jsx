@@ -7,7 +7,7 @@ export default function RatingStars({ rating = 5, size = 16, className = '' }) {
         <Star
           key={i}
           size={size}
-          className={i < rating ? 'text-accent-gold fill-accent-gold' : 'text-charcoal/20'}
+          className={i < rating ? 'text-brand-yellow fill-brand-yellow' : 'text-charcoal/20'}
         />
       ))}
     </div>

@@ -1,14 +1,10 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Facebook, ChevronDown, ChevronUp, MessageSquare } from "lucide-react";
-import { reviews, reviewSummary } from "../../data/reviews";
-import ReviewCard from "../reviews/ReviewCard";
+import { Facebook, MessageSquare } from "lucide-react";
+import { reviewSummary } from "../../data/reviews";
 import SectionHeading from "../common/SectionHeading";
+import { facebookPageUrl, createWhatsAppUrl } from "../../data/contact";
 
 export default function ReviewPreview() {
-  const [showAll, setShowAll] = useState(false);
-  const displayedReviews = showAll ? reviews : reviews.slice(0, 3);
-
   return (
     <section
       className="bg-cream py-16 sm:py-20 lg:py-24"
@@ -18,60 +14,24 @@ export default function ReviewPreview() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div>
             <SectionHeading
-              eyebrow="What Our Customers Say"
-              heading="Real Reviews from Real Customers"
+              eyebrow="Facebook Reviews"
+              heading="100% Recommended"
+              subheading={`Nice Cleaning is rated 100% recommended on Facebook, based on ${reviewSummary.total} reviews.`}
               align="left"
             />
-            {/* Summary badge */}
-            <div className="flex items-center gap-3 mt-4">
-              <div className="flex items-center gap-1.5 bg-[#4267B2]/10 text-[#4267B2] px-3.5 py-1.5 rounded-full text-xs font-semibold font-sans">
-                <Facebook size={14} />
-                Reviews from Facebook
-              </div>
-              <span className="text-sm font-semibold text-charcoal/70 font-sans">
-                {reviewSummary.recommendPercent}% recommend ·{" "}
-                {reviewSummary.total} Facebook reviews
-              </span>
-            </div>
           </div>
 
           <a
-            href="https://www.facebook.com"
+            href={facebookPageUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary text-xs flex-shrink-0 self-start sm:self-auto"
           >
-            Visit Facebook
+            <Facebook size={14} /> Visit Our Facebook Page
           </a>
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {displayedReviews.map((review) => (
-            <ReviewCard key={review.id} review={review} />
-          ))}
-        </div>
-
-        {/* Toggle Show All / Show Less button */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          {reviews.length > 3 && (
-            <button
-              onClick={() => setShowAll((prev) => !prev)}
-              className="btn-secondary text-xs font-sans flex items-center gap-1.5"
-            >
-              {showAll ? (
-                <>
-                  Show Less <ChevronUp size={15} />
-                </>
-              ) : (
-                <>
-                  Show All Customer Reviews ({reviews.length}){" "}
-                  <ChevronDown size={15} />
-                </>
-              )}
-            </button>
-          )}
-
           <Link
             to="/request-quote"
             className="btn-primary text-xs flex items-center gap-1.5"
@@ -79,7 +39,7 @@ export default function ReviewPreview() {
             Request a Quote
           </Link>
           <a
-            href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20enquire%20about%20a%20cleaning%20service."
+            href={createWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp text-xs flex items-center gap-1.5"

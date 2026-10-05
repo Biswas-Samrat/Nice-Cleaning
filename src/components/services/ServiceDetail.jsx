@@ -13,18 +13,18 @@ export default function ServiceDetail({ service, isReversed }) {
       }`}
     >
       <div className={isReversed ? "lg:order-2" : ""}>
-        <div className="rounded-2xl overflow-hidden shadow-sm border border-charcoal/8 relative group">
+        <div className="rounded-2xl overflow-hidden bg-white shadow-sm border border-charcoal/8">
           <img
             src={service.image}
-            alt={`${service.title} - Sparkle & Clean`}
-            className="w-full h-[320px] sm:h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+            alt={`${service.title} - Nice Cleaning`}
+            className="w-full h-[320px] sm:h-[400px] bg-white object-contain"
             loading="lazy"
           />
         </div>
       </div>
 
       <div className={isReversed ? "lg:order-1" : ""}>
-        <div className="w-10 h-10 rounded-xl bg-skyblue-100 text-accent-blue flex items-center justify-center mb-4">
+        <div className="w-10 h-10 rounded-xl bg-brand-teal-light text-brand-purple flex items-center justify-center mb-4">
           {Icon && <Icon size={20} />}
         </div>
         <h2 className="font-display text-3xl sm:text-4xl font-medium text-charcoal mb-4">
@@ -46,7 +46,7 @@ export default function ServiceDetail({ service, isReversed }) {
                     key={idx}
                     className="flex items-center gap-2 text-sm text-charcoal/70 font-sans"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent-blue flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-purple flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -67,7 +67,7 @@ export default function ServiceDetail({ service, isReversed }) {
                   >
                     <Check
                       size={14}
-                      className="text-accent-sage flex-shrink-0"
+                      className="text-brand-teal flex-shrink-0"
                     />
                     {item}
                   </li>
@@ -82,7 +82,7 @@ export default function ServiceDetail({ service, isReversed }) {
             Request a Quote <ArrowRight size={16} />
           </Link>
           <span className="font-sans font-semibold text-charcoal text-sm bg-white px-3 py-1.5 rounded-lg border border-charcoal/10">
-            {service.price} {service.priceNote ? `(${service.priceNote})` : ""}
+            Personalised quote
           </span>
         </div>
       </div>

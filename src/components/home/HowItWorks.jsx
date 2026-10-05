@@ -4,24 +4,30 @@ import SectionHeading from "../common/SectionHeading";
 const steps = [
   {
     step: "01",
-    icon: MessageSquare,
+    icon: Phone,
     title: "Get in Touch",
-    description:
-      "Contact Sparkle & Clean by phone, WhatsApp or the quote form and let us know what your home needs.",
+    description: "Call or message Nice Cleaning to tell us what you need.",
   },
   {
     step: "02",
     icon: ClipboardList,
-    title: "Discuss Your Requirements",
+    title: "Discuss Your Cleaning",
     description:
-      "Tell us about your home, the service you need and any specific requirements or questions you have.",
+      "Tell us about your home, the service you need and any specific requirements.",
   },
   {
     step: "03",
-    icon: CheckCircle,
-    title: "Enjoy a Clean Home",
+    icon: MessageSquare,
+    title: "Get Your Quote",
     description:
-      "Sparkle & Clean takes care of everything. Come home to a fresh, polished and cared-for space.",
+      "We’ll discuss your requirements and provide a personalised quote.",
+  },
+  {
+    step: "04",
+    icon: CheckCircle,
+    title: "Enjoy a Cleaner Home",
+    description:
+      "Enjoy a fresh, clean space with less stress and fewer chores.",
   },
 ];
 
@@ -36,12 +42,12 @@ export default function HowItWorks() {
           <SectionHeading
             eyebrow="Simple Process"
             heading="Getting Started is Easy"
-            subheading="Sparkle & Clean makes the process as smooth and straightforward as possible."
+            subheading="A simple, personal way to arrange the cleaning your home needs."
             light
           />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {/* Connector line (desktop) */}
           <div
             className="hidden sm:block absolute top-8 left-1/6 right-1/6 h-px bg-white/10"
@@ -58,16 +64,16 @@ export default function HowItWorks() {
                 {/* Step number */}
                 <div className="relative mb-5">
                   <div className="w-16 h-16 rounded-full bg-white/8 border border-white/15 flex items-center justify-center">
-                    <Icon size={24} className="text-accent-blue" />
+                    <Icon size={24} className="text-brand-purple" />
                   </div>
-                  <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent-gold text-charcoal text-[10px] font-bold font-sans flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-brand-yellow text-charcoal text-[10px] font-bold font-sans flex items-center justify-center">
                     {i + 1}
                   </span>
                 </div>
-                <h3 className="font-display font-medium text-black text-lg mb-2">
+                <h3 className="font-display font-medium text-white text-lg mb-2">
                   {step.title}
                 </h3>
-                <p className="font-sans text-sm text-black leading-relaxed">
+                <p className="font-sans text-sm text-white/70 leading-relaxed">
                   {step.description}
                 </p>
               </div>

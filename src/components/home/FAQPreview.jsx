@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronDown, MessageSquare } from "lucide-react";
 import { faqs } from "../../data/faqs";
 import SectionHeading from "../common/SectionHeading";
+import { createWhatsAppUrl } from "../../data/contact";
 
 export default function FAQPreview() {
   const [openId, setOpenId] = useState(null);
@@ -13,7 +14,7 @@ export default function FAQPreview() {
 
   return (
     <section
-      className="bg-skyblue-100 py-16 sm:py-20 lg:py-24"
+      className="bg-brand-teal-light py-16 sm:py-20 lg:py-24"
       aria-label="Frequently asked questions"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +23,7 @@ export default function FAQPreview() {
             <SectionHeading
               eyebrow="Help & Information"
               heading="Common Questions Answered"
-              subheading="Clear answers to common questions about Sparkle & Clean's cleaning services and bookings."
+              subheading="Clear answers about Nice Cleaning’s services, coverage and bookings."
             />
           </div>
 
@@ -35,14 +36,14 @@ export default function FAQPreview() {
                 <button
                   onClick={() => toggle(faq.id)}
                   aria-expanded={openId === faq.id}
-                  className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-cream/50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue/30"
+                  className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-cream/50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-purple/30"
                 >
                   <span className="font-sans font-semibold text-charcoal text-base pr-4">
                     {faq.question}
                   </span>
                   <ChevronDown
                     size={18}
-                    className={`text-accent-blue flex-shrink-0 transition-transform duration-200 ${openId === faq.id ? "rotate-180" : ""}`}
+                    className={`text-brand-purple flex-shrink-0 transition-transform duration-200 ${openId === faq.id ? "rotate-180" : ""}`}
                   />
                 </button>
 
@@ -70,7 +71,7 @@ export default function FAQPreview() {
             </div>
           )}
 
-          <div className="mt-10 p-6 bg-white/90 rounded-2xl border border-accent-blue/20 text-center shadow-sm">
+          <div className="mt-10 p-6 bg-white/90 rounded-2xl border border-brand-purple/20 text-center shadow-sm">
             <p className="font-sans font-semibold text-charcoal text-base mb-1">
               Have another question?
             </p>
@@ -83,7 +84,9 @@ export default function FAQPreview() {
                 Request a Quote
               </Link>
               <a
-                href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27ve%20got%20a%20question%20about%20your%20cleaning%20services."
+                href={createWhatsAppUrl(
+                  "Hi Nice Cleaning, I've got a question about your cleaning services.",
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs flex items-center gap-1.5"

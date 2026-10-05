@@ -2,7 +2,7 @@ export default function GalleryCard({ item, onClick }) {
   return (
     <button
       onClick={() => onClick(item)}
-      className="group block w-full rounded-xl overflow-hidden relative focus:outline-none focus:ring-2 focus:ring-accent-blue focus:ring-offset-2"
+      className="group block w-full rounded-xl overflow-hidden relative focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2"
       aria-label={`View ${item.title}`}
     >
       <img

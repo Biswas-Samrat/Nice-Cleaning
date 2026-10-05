@@ -6,13 +6,13 @@ import BackToTopButton from "../components/common/BackToTopButton";
 import Breadcrumb from "../components/common/Breadcrumb";
 import QuoteForm from "../components/contact/QuoteForm";
 import ContactCard from "../components/contact/ContactCard";
-import { ShieldCheck, Clock, ThumbsUp, MapPin } from "lucide-react";
+import { ShieldCheck, Star, ThumbsUp, MapPin } from "lucide-react";
 import { areas } from "../data/areas";
 
 export default function RequestQuote() {
   return (
     <>
-      <title>Request a Quote | Sparkle & Clean</title>
+      <title>Request a Quote | Nice Cleaning</title>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -21,15 +21,15 @@ export default function RequestQuote() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumb items={[{ label: "Request a Quote" }]} />
             <div className="mt-6 max-w-2xl">
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 font-sans">
-                Free & No Obligation
+              <p className="text-xs font-semibold tracking-widest uppercase text-brand-purple mb-3 font-sans">
+                Personalised Quotes
               </p>
               <h1 className="font-display text-4xl sm:text-5xl font-medium text-charcoal mb-4 leading-tight">
                 Request a Cleaning Quote
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed">
-                Tell Sparkle & Clean what you need cleaned and we'll be in touch
-                to confirm availability and pricing.
+                Tell Nice Cleaning what you need and we’ll get back to discuss
+                your requirements.
               </p>
             </div>
           </div>
@@ -47,11 +47,11 @@ export default function RequestQuote() {
                 {/* Why Choose Us Card */}
                 <div className="bg-white rounded-2xl border border-charcoal/8 p-6 space-y-4 shadow-sm">
                   <h3 className="font-display font-medium text-lg text-charcoal mb-2">
-                    Why Customers Choose Sparkle & Clean
+                    Why Choose Nice Cleaning?
                   </h3>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-accent-sage/10 text-accent-sage flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-8 h-8 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center flex-shrink-0 mt-0.5">
                       <ThumbsUp size={16} />
                     </div>
                     <div>
@@ -59,35 +59,37 @@ export default function RequestQuote() {
                         100% Recommended
                       </p>
                       <p className="font-sans text-xs text-charcoal/60 leading-relaxed">
-                        14 Facebook recommendations
+                        40 Facebook reviews
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-skyblue-100 text-accent-blue flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Clock size={16} />
+                    <div className="w-8 h-8 rounded-lg bg-brand-teal-light text-brand-purple flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Star size={16} />
                     </div>
                     <div>
                       <p className="font-sans font-semibold text-xs text-charcoal">
-                        Fast Response
+                        5 Star Cleans
                       </p>
                       <p className="font-sans text-xs text-charcoal/60 leading-relaxed">
-                        Reply via your chosen contact method
+                        Professional cleaning with a focus on quality, care and
+                        detail.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-accent-gold/10 text-accent-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-8 h-8 rounded-lg bg-brand-yellow/10 text-brand-yellow flex items-center justify-center flex-shrink-0 mt-0.5">
                       <ShieldCheck size={16} />
                     </div>
                     <div>
                       <p className="font-sans font-semibold text-xs text-charcoal">
-                        Personal Care
+                        Fully Insured
                       </p>
                       <p className="font-sans text-xs text-charcoal/60 leading-relaxed">
-                        Respectful, friendly and non-judgemental cleaning
+                        Your home is treated with care by a fully insured
+                        cleaning service.
                       </p>
                     </div>
                   </div>
@@ -99,9 +101,9 @@ export default function RequestQuote() {
                 {/* Service Areas Summary */}
                 <div className="bg-white rounded-2xl border border-charcoal/8 p-6 shadow-sm">
                   <div className="flex items-center gap-2 mb-3">
-                    <MapPin size={18} className="text-accent-blue" />
+                    <MapPin size={18} className="text-brand-purple" />
                     <h3 className="font-display font-medium text-base text-charcoal">
-                      Serving Armagh & Nearby
+                      Serving Newport & Nearby
                     </h3>
                   </div>
                   <div className="flex flex-wrap gap-1.5">

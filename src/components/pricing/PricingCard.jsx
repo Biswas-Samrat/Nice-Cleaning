@@ -3,25 +3,25 @@ import { Check, Info } from 'lucide-react'
 
 const accentMap = {
   blue: {
-    dot: 'bg-accent-blue',
-    badge: 'bg-skyblue-100 text-accent-blue border-skyblue-200',
-    border: 'border-accent-blue/25',
-    header: 'bg-skyblue-100',
-    check: 'text-accent-blue',
+    dot: 'bg-brand-purple',
+    badge: 'bg-brand-teal-light text-brand-purple border-brand-teal-light',
+    border: 'border-brand-purple/25',
+    header: 'bg-brand-teal-light',
+    check: 'text-brand-purple',
   },
   gold: {
-    dot: 'bg-accent-gold',
-    badge: 'bg-accent-gold/10 text-accent-gold border-accent-gold/20',
-    border: 'border-accent-gold/25',
-    header: 'bg-accent-gold/8',
-    check: 'text-accent-gold',
+    dot: 'bg-brand-yellow',
+    badge: 'bg-brand-yellow/10 text-brand-yellow border-brand-yellow/20',
+    border: 'border-brand-yellow/25',
+    header: 'bg-brand-yellow/8',
+    check: 'text-brand-yellow',
   },
   sage: {
-    dot: 'bg-accent-sage',
-    badge: 'bg-accent-sage/10 text-accent-sage border-accent-sage/20',
-    border: 'border-accent-sage/25',
-    header: 'bg-accent-sage/8',
-    check: 'text-accent-sage',
+    dot: 'bg-brand-teal',
+    badge: 'bg-brand-teal/10 text-brand-teal border-brand-teal/20',
+    border: 'border-brand-teal/25',
+    header: 'bg-brand-teal/8',
+    check: 'text-brand-teal',
   },
 }
 

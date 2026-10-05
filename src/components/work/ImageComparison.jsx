@@ -85,7 +85,7 @@ export default function ImageComparison({
       {/* AFTER IMAGE OR FALLBACK */}
       {afterError ? (
         <div className="absolute inset-0 bg-cream flex flex-col items-center justify-center p-4 text-center">
-          <span className="text-xs font-semibold text-accent-blue uppercase tracking-wider font-sans mb-1">After Clean</span>
+          <span className="text-xs font-semibold text-brand-purple uppercase tracking-wider font-sans mb-1">After Clean</span>
           <span className="text-xs text-charcoal/50 font-sans">Transformation photo coming soon</span>
         </div>
       ) : (
@@ -107,7 +107,7 @@ export default function ImageComparison({
         }}
       >
         {beforeError ? (
-          <div className="h-full w-full bg-skyblue-100 flex flex-col items-center justify-center p-4 text-center">
+          <div className="h-full w-full bg-brand-teal-light flex flex-col items-center justify-center p-4 text-center">
             <span className="text-xs font-semibold text-charcoal/60 uppercase tracking-wider font-sans mb-1">Before Clean</span>
             <span className="text-xs text-charcoal/50 font-sans">Before photo coming soon</span>
           </div>

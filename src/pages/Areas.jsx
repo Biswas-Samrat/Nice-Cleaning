@@ -8,11 +8,12 @@ import BackToTopButton from "../components/common/BackToTopButton";
 import CTASection from "../components/common/CTASection";
 import Breadcrumb from "../components/common/Breadcrumb";
 import AreasList from "../components/areas/AreasList";
+import { createWhatsAppUrl } from "../data/contact";
 
 export default function Areas() {
   return (
     <>
-      <title>Areas We Cover | Sparkle & Clean</title>
+      <title>Areas We Cover | Nice Cleaning</title>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -21,22 +22,24 @@ export default function Areas() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumb items={[{ label: "Areas We Cover" }]} />
             <div className="mt-6 max-w-3xl">
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 font-sans">
+              <p className="text-xs font-semibold tracking-widest uppercase text-brand-purple mb-3 font-sans">
                 Local Coverage
               </p>
               <h1 className="font-display text-4xl sm:text-5xl font-medium text-charcoal mb-4 leading-tight">
-                Serving Armagh & Surrounding Areas
+                Serving Newport & Surrounding Areas
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed mb-6">
-                Sparkle & Clean provides reliable home cleaning services across
-                Armagh and neighbouring local communities.
+                Nice Cleaning provides professional home cleaning across
+                Newport, Gwent and nearby local communities.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/request-quote" className="btn-primary">
-                  Check Availability & Get a Quote <ArrowRight size={16} />
+                  Check Availability <ArrowRight size={16} />
                 </Link>
                 <a
-                  href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20check%20if%20you%20cover%20my%20area."
+                  href={createWhatsAppUrl(
+                    "Hi Nice Cleaning, I'd like to check if you cover my area.",
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp"
@@ -63,9 +66,9 @@ export default function Areas() {
 
             <AreasList />
 
-            <div className="mt-12 bg-skyblue-100 rounded-2xl p-6 sm:p-8 border border-accent-blue/20 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+            <div className="mt-12 bg-brand-teal-light rounded-2xl p-6 sm:p-8 border border-brand-purple/20 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent-blue text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-10 h-10 rounded-xl bg-brand-purple text-white flex items-center justify-center flex-shrink-0 mt-0.5">
                   <MapPin size={20} />
                 </div>
                 <div>
@@ -74,7 +77,7 @@ export default function Areas() {
                   </h3>
                   <p className="font-sans text-sm text-charcoal/65">
                     Get in touch to check availability for your local area
-                    around Armagh and nearby communities.
+                    around Newport and nearby communities.
                   </p>
                 </div>
               </div>
@@ -83,7 +86,9 @@ export default function Areas() {
                   Request a Quote
                 </Link>
                 <a
-                  href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20check%20availability%20for%20my%20postcode."
+                  href={createWhatsAppUrl(
+                    "Hi Nice Cleaning, I'd like to check availability for my postcode.",
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp text-xs flex items-center gap-1.5"

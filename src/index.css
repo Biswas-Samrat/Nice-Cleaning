@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --brand-pink: #E83F82;
-  --brand-pink-light: #FFF4F8;
-  --brand-pink-dark: #C92F69;
-  --blush: #FFF8FB;
-  --dark: #171717;
+  --brand-purple: #5A2A91;
+  --brand-purple-light: #F3EAF9;
+  --brand-purple-dark: #35205F;
+  --brand-teal: #20B7B0;
+  --brand-teal-light: #DDF6F4;
+  --brand-coral: #E85A7A;
+  --brand-yellow: #F4C542;
+  --cream: #FFF9F4;
+  --dark: #1E1A2B;
   --white: #FFFFFF;
-  --soft-border: #F1D9E3;
-  --muted: #555555;
+  --soft-border: #E9DDEB;
+  --muted: #625D68;
 }
 
 @layer base {
@@ -24,7 +28,7 @@
 
   body {
     @apply font-sans text-dark bg-white antialiased;
-    background-image: linear-gradient(180deg, #fff 0%, #fff8fb 100%);
+    background-image: linear-gradient(180deg, #fff 0%, #fff9f4 100%);
     overflow-x: hidden;
   }
 
@@ -44,15 +48,15 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-pink text-white font-sans font-medium text-sm rounded-full transition-all duration-200 hover:bg-brand-pink-dark hover:shadow-soft active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-pink/40 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-purple text-white font-sans font-medium text-sm rounded-full transition-all duration-200 hover:bg-brand-purple-dark hover:shadow-soft active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-purple/40 focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-brand-pink/25 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:border-brand-pink hover:bg-brand-pink-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-pink/20 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-brand-purple/25 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:border-brand-purple hover:bg-brand-purple-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:ring-offset-2;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-brand-pink/40 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:border-brand-pink hover:bg-brand-pink-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-pink/20 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-brand-purple/40 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:border-brand-purple hover:bg-brand-purple-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:ring-offset-2;
   }
 
   .btn-whatsapp {
@@ -60,7 +64,7 @@
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:bg-brand-pink-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-pink/20 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:bg-brand-purple-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:ring-offset-2;
   }
 
   .section-py {
@@ -72,11 +76,11 @@
   }
 
   .card {
-    @apply bg-white rounded-[28px] border border-brand-pink/20 shadow-soft transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-pink/40;
+    @apply bg-white rounded-[28px] border border-brand-purple/20 shadow-soft transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-purple/40;
   }
 
   .input-field {
-    @apply w-full px-4 py-3 bg-white border border-border rounded-2xl text-dark placeholder:text-dark/40 font-sans text-sm transition-colors duration-200 focus:outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/20;
+    @apply w-full px-4 py-3 bg-white border border-border rounded-2xl text-dark placeholder:text-dark/40 font-sans text-sm transition-colors duration-200 focus:outline-none focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20;
   }
 
   .input-error {
@@ -87,8 +91,52 @@
     @apply block text-sm font-medium text-dark mb-1.5;
   }
 
-  .sparkle-badge {
-    @apply inline-flex items-center gap-2 rounded-full border border-brand-pink/20 bg-brand-pink-light px-3.5 py-1.5 text-[11px] font-sans font-semibold uppercase tracking-[0.2em] text-brand-pink;
+  .trust-badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-purple/20 bg-brand-purple-light px-3.5 py-1.5 text-[11px] font-sans font-semibold uppercase tracking-[0.2em] text-brand-purple;
+  }
+}
+
+.hero-bubble-field {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 64px;
+  pointer-events: none;
+}
+
+.hero-bubble {
+  position: absolute;
+  left: var(--bubble-x);
+  top: var(--bubble-y);
+  width: var(--bubble-size);
+  height: var(--bubble-size);
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: var(--bubble-color);
+  box-shadow: inset -2px -3px 5px rgba(23, 23, 23, 0.14), 0 2px 8px rgba(23, 23, 23, 0.14);
+  animation: hero-bubble-float var(--bubble-duration) ease-in-out var(--bubble-delay) infinite;
+}
+
+.hero-bubble::after {
+  position: absolute;
+  top: 18%;
+  left: 22%;
+  width: 27%;
+  height: 20%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.82);
+  content: "";
+}
+
+@keyframes hero-bubble-float {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -9px, 0);
   }
 }
 
@@ -97,11 +145,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #fff4f8;
+  background: #f3eaf9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #E83F82 0%, #F36A9B 100%);
+  background: linear-gradient(180deg, #5A2A91 0%, #20B7B0 100%);
   border-radius: 999px;
 }
 

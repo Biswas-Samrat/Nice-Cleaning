@@ -35,11 +35,11 @@ export default function ReviewCard({ review }) {
       {review.recommended && (
         <div className="mt-5 pt-4 border-t border-charcoal/6 flex items-center gap-2">
           <div
-            className="w-1.5 h-1.5 rounded-full bg-accent-sage"
+            className="w-1.5 h-1.5 rounded-full bg-brand-teal"
             aria-hidden="true"
           />
-          <span className="text-xs font-semibold text-accent-sage font-sans">
-            Recommends Sparkle & Clean
+          <span className="text-xs font-semibold text-brand-teal font-sans">
+            Recommends Nice Cleaning
           </span>
         </div>
       )}

@@ -4,6 +4,7 @@ export default function SectionHeading({
   subheading,
   align = "center",
   className = "",
+  light = false,
 }) {
   const alignClasses = {
     center: "text-center mx-auto",
@@ -14,26 +15,24 @@ export default function SectionHeading({
   return (
     <div className={`max-w-3xl ${alignClasses[align]} ${className}`}>
       {eyebrow && (
-        <div
-          className={`mb-5 inline-flex items-center gap-2.5 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-pink-500`}
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-pink-500" />
+        <div className="mb-5 inline-flex items-center gap-2.5 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-brand-purple">
+          <span className="h-1.5 w-1.5 rounded-full bg-brand-coral" />
           <span>{eyebrow}</span>
-          <span className="h-px w-8 bg-pink-200" />
+          <span className="h-px w-8 bg-brand-teal" />
         </div>
       )}
 
       <h2
-        className="
+        className={`
           font-display
           text-3xl
           font-semibold
           leading-[1.08]
           tracking-[-0.035em]
-          text-neutral-900
+          ${light ? "text-white" : "text-neutral-900"}
           sm:text-4xl
           lg:text-[3.2rem]
-        "
+        `}
       >
         {heading}
       </h2>

@@ -4,35 +4,34 @@ const steps = [
   {
     icon: PhoneCall,
     title: "1. Get In Touch",
-    description:
-      "Call, message on WhatsApp, or complete our quick online quote form with your cleaning details.",
+    description: "Call or message Nice Cleaning to tell us what you need.",
   },
   {
     icon: CalendarCheck,
-    title: "2. Agree Details",
+    title: "2. Discuss Your Cleaning",
     description:
-      "We discuss your specific needs, agree on convenient dates and timings, and confirm the price.",
+      "Tell us about your home, the service you need and any specific requirements.",
   },
   {
     icon: Sparkles,
-    title: "3. Professional Clean",
+    title: "3. Get Your Quote",
     description:
-      "Our team arrives promptly and carries out a detailed, attentive clean of your home.",
+      "We’ll discuss your requirements and provide a personalised quote.",
   },
   {
     icon: Home,
-    title: "4. Enjoy The Shine",
+    title: "4. Enjoy a Cleaner Home",
     description:
-      "Come home to a fresh, gleaming space that smells wonderful and lightens your daily load.",
+      "Enjoy a fresh, clean space with less stress and fewer chores.",
   },
 ];
 
 export default function CleaningProcess() {
   return (
-    <section className="bg-skyblue-100 py-16 sm:py-20">
+    <section className="bg-brand-teal-light py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl mx-auto text-center mb-12">
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 font-sans">
+          <p className="text-xs font-semibold tracking-widest uppercase text-brand-purple mb-3 font-sans">
             Simple & Stress-Free
           </p>
           <h2 className="font-display text-3xl sm:text-4xl font-medium text-charcoal">
@@ -49,10 +48,10 @@ export default function CleaningProcess() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 border border-accent-blue/15 shadow-sm relative flex flex-col justify-between"
+                className="bg-white rounded-2xl p-6 border border-brand-purple/15 shadow-sm relative flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-skyblue-100 text-accent-blue flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-brand-teal-light text-brand-purple flex items-center justify-center mb-4">
                     <Icon size={22} />
                   </div>
                   <h3 className="font-display font-medium text-lg text-charcoal mb-2">

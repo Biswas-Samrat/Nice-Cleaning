@@ -10,41 +10,34 @@ import Breadcrumb from "../components/common/Breadcrumb";
 import FAQPreview from "../components/home/FAQPreview";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import { services, serviceIcons } from "../data/services";
+import { createWhatsAppUrl } from "../data/contact";
 
 const accentColors = {
-  pink: {
-    icon: "bg-brand-pink/10 text-brand-pink",
-    border: "border-brand-pink/20",
+  purple: {
+    icon: "bg-brand-purple/10 text-brand-purple",
+    border: "border-brand-purple/20",
   },
-  rose: {
-    icon: "bg-brand-pink-light text-brand-pink",
-    border: "border-brand-pink/20",
+  teal: {
+    icon: "bg-brand-teal-light text-brand-teal",
+    border: "border-brand-teal/20",
   },
-  blue: {
-    icon: "bg-skyblue-100 text-accent-blue",
-    border: "border-accent-blue/20",
-  },
-  gold: {
-    icon: "bg-accent-gold/10 text-accent-gold",
-    border: "border-accent-gold/20",
-  },
-  sage: {
-    icon: "bg-accent-sage/10 text-accent-sage",
-    border: "border-accent-sage/20",
+  coral: {
+    icon: "bg-brand-coral/10 text-brand-coral",
+    border: "border-brand-coral/20",
   },
 };
 
 const steps = [
-  "Get in touch via phone, WhatsApp or the quote form",
-  "Discuss your requirements and agree on a date",
-  "Sparkle & Clean arrives and carries out the clean",
-  "You come home to a fresh, spotless space",
+  "Call or message Nice Cleaning to tell us what you need",
+  "Discuss your home, service and any requirements",
+  "Receive a personalised quote for your needs",
+  "Enjoy a fresher home with fewer chores",
 ];
 
 export default function Services() {
   return (
     <>
-      <title>Cleaning Services | Sparkle & Clean</title>
+      <title>Cleaning Services | Nice Cleaning</title>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -53,23 +46,23 @@ export default function Services() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumb items={[{ label: "Services" }]} />
             <div className="mt-6 max-w-2xl">
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 font-sans">
-                Sparkle & Clean
+              <p className="text-xs font-semibold tracking-widest uppercase text-brand-purple mb-3 font-sans">
+                Nice Cleaning
               </p>
               <h1 className="font-display text-4xl sm:text-5xl font-medium text-charcoal mb-4 leading-tight">
-                Cleaning Services Designed Around Your Home
+                Cleaning Services Designed Around You
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed mb-6">
-                From regular home cleans to deep, one-off, fridge and freezer or
-                window cleaning, Sparkle & Clean provides professional cleaning
-                services tailored to your needs.
+                From house cleans to detailed deep cleans and end of tenancy
+                cleaning, Nice Cleaning provides a professional, friendly
+                service tailored to your needs.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/request-quote" className="btn-primary">
                   Request a Quote <ArrowRight size={16} />
                 </Link>
                 <a
-                  href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20enquire%20about%20a%20cleaning%20service."
+                  href={createWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp"
@@ -101,11 +94,11 @@ export default function Services() {
                   >
                     {/* Image */}
                     <div className={isEven ? "" : "lg:order-2"}>
-                      <div className="rounded-2xl overflow-hidden shadow-md">
+                      <div className="rounded-2xl overflow-hidden bg-white shadow-md">
                         <img
                           src={service.image}
-                          alt={`${service.title} by Sparkle & Clean`}
-                          className="w-full h-[300px] sm:h-[380px] object-cover"
+                          alt={`${service.title} by Nice Cleaning`}
+                          className="w-full h-[300px] sm:h-[380px] bg-white object-contain"
                           loading="lazy"
                         />
                       </div>
@@ -136,7 +129,7 @@ export default function Services() {
                                 key={item}
                                 className="flex items-center gap-2 text-sm text-charcoal/65 font-sans"
                               >
-                                <div className="w-1.5 h-1.5 rounded-full bg-accent-blue flex-shrink-0" />
+                                <div className="w-1.5 h-1.5 rounded-full bg-brand-purple flex-shrink-0" />
                                 {item}
                               </li>
                             ))}
@@ -154,7 +147,7 @@ export default function Services() {
                               >
                                 <Check
                                   size={13}
-                                  className="text-accent-sage flex-shrink-0"
+                                  className="text-brand-teal flex-shrink-0"
                                 />
                                 {item}
                               </li>
@@ -163,18 +156,13 @@ export default function Services() {
                         </div>
                       </div>
 
-                      {/* Price badge */}
+                      {/* Personalised quote label */}
                       <div
                         className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg border ${colors.border} bg-white mb-5`}
                       >
                         <span className="font-display font-semibold text-charcoal text-xl">
-                          {service.price}
+                          Personalised quote
                         </span>
-                        {service.priceNote && (
-                          <span className="font-sans text-sm text-charcoal/50">
-                            {service.priceNote}
-                          </span>
-                        )}
                       </div>
 
                       <div>
@@ -194,14 +182,14 @@ export default function Services() {
         <WhyChooseUs />
 
         {/* Cleaning Process */}
-        <section className="bg-skyblue-100 py-16 sm:py-20">
+        <section className="bg-brand-teal-light py-16 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-xl mx-auto text-center mb-10">
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 font-sans">
+              <p className="text-xs font-semibold tracking-widest uppercase text-brand-purple mb-3 font-sans">
                 Simple Process
               </p>
               <h2 className="font-display text-3xl sm:text-4xl font-medium text-charcoal">
-                How Sparkle & Clean Works
+                How Nice Cleaning Works
               </h2>
             </div>
             <div className="max-w-2xl mx-auto">

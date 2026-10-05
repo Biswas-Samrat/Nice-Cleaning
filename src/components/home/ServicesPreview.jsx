@@ -4,7 +4,7 @@ import { services, serviceIcons } from "../../data/services";
 import SectionHeading from "../common/SectionHeading";
 
 export default function ServicesPreview() {
-  const previewServices = services.slice(0, 5);
+  const previewServices = services;
 
   return (
     <section
@@ -16,8 +16,8 @@ export default function ServicesPreview() {
         <div className="mb-12 flex flex-col gap-7 lg:mb-16 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="What We Offer"
-            heading="Cleaning services designed around your needs."
-            subheading="From regular home cleaning to specialist jobs, every service is carried out with care, attention to detail and a professional finish."
+            heading="Cleaning Services Designed Around You"
+            subheading="From house cleans to detailed deep cleans and end of tenancy cleaning, Nice Cleaning provides a professional, friendly service tailored to your needs."
             align="left"
           />
 
@@ -32,22 +32,22 @@ export default function ServicesPreview() {
               gap-2.5
               rounded-full
               border
-              border-pink-100
-              bg-pink-50
+              border-brand-purple/20
+              bg-brand-purple-light
               px-5
               py-3
               font-sans
               text-sm
               font-semibold
-              text-pink-600
+              text-brand-purple
               transition-all
               duration-300
-              hover:border-pink-200
-              hover:bg-pink-100
-              hover:text-pink-700
+              hover:border-brand-purple/40
+              hover:bg-brand-teal-light
+              hover:text-brand-purple-dark
             "
           >
-            View all services
+            View Our Services
             <ArrowUpRight
               size={15}
               strokeWidth={2}
@@ -90,12 +90,12 @@ export default function ServicesPreview() {
                   border
                   border-neutral-200/80
                   bg-white
-                  shadow-[0_8px_35px_rgba(236,72,153,0.04)]
+                  shadow-[0_8px_35px_rgba(90,42,145,0.04)]
                   transition-all
                   duration-500
                   hover:-translate-y-1
-                  hover:border-pink-200
-                  hover:shadow-[0_20px_50px_rgba(236,72,153,0.10)]
+                  hover:border-brand-purple/20
+                  hover:shadow-[0_20px_50px_rgba(90,42,145,0.10)]
                   ${gridClass}
                 `}
               >
@@ -104,7 +104,7 @@ export default function ServicesPreview() {
                   className={`
                     relative
                     overflow-hidden
-                    bg-pink-50
+                    bg-white
                     ${isFeatured || isLarge ? "aspect-[16/9]" : "aspect-[4/3]"}
                   `}
                 >
@@ -114,11 +114,7 @@ export default function ServicesPreview() {
                     className="
                       h-full
                       w-full
-                      object-cover
-                      transition-transform
-                      duration-700
-                      ease-out
-                      group-hover:scale-[1.045]
+                      object-contain
                     "
                     loading="lazy"
                   />
@@ -167,15 +163,15 @@ export default function ServicesPreview() {
                         items-center
                         justify-center
                         rounded-2xl
-                        bg-pink-50
-                        text-pink-500
+                        bg-brand-purple-light
+                        text-brand-purple
                         ring-1
                         ring-inset
-                        ring-pink-100
+                        ring-brand-purple/20
                         transition-all
                         duration-300
-                        group-hover:bg-pink-100
-                        group-hover:text-pink-600
+                        group-hover:bg-brand-teal-light
+                        group-hover:text-brand-purple-dark
                       "
                     >
                       {Icon && (
@@ -189,10 +185,10 @@ export default function ServicesPreview() {
                         font-semibold
                         uppercase
                         tracking-[0.16em]
-                        text-pink-400
+                        text-brand-purple
                       "
                     >
-                      Sparkle & Clean
+                      Nice Cleaning
                     </span>
                   </div>
 
@@ -242,11 +238,11 @@ export default function ServicesPreview() {
                           items-center
                           justify-center
                           rounded-full
-                          bg-pink-50
-                          text-pink-500
+                          bg-brand-purple-light
+                          text-brand-purple
                           transition-all
                           duration-300
-                          group-hover:bg-pink-500
+                          group-hover:bg-brand-purple
                           group-hover:text-white
                         "
                       >

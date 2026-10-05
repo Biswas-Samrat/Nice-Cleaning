@@ -1,23 +1,21 @@
 import { useState, useRef } from "react";
-import { Upload, X, CheckCircle, AlertCircle } from "lucide-react";
+import {
+  Upload,
+  X,
+  CheckCircle,
+  AlertCircle,
+  MessageCircle,
+} from "lucide-react";
+import { createWhatsAppUrl } from "../../data/contact";
 
 const serviceOptions = [
-  "House Cleaning",
-  "Oven Cleaning",
-  "Car Cleaning",
-  "End of Tenancy Cleaning",
-  "Move In Cleaning",
+  "House Cleans",
+  "Deep Cleans",
+  "End of Tenancy Cleans",
   "Other",
 ];
 
 const contactMethods = ["Phone", "WhatsApp", "Email"];
-
-const timeOptions = [
-  "Morning (8am–12pm)",
-  "Afternoon (12pm–5pm)",
-  "Evening (5pm–8pm)",
-  "Flexible",
-];
 
 const initialState = {
   name: "",
@@ -80,23 +78,36 @@ export default function QuoteForm() {
     setSubmitted(true);
   };
 
-  const waMessage = encodeURIComponent(
-    `Hi Sparkle & Clean, I'd like to request a quote for ${fields.service || "a cleaning service"}. ${fields.date ? `My preferred date is ${fields.date}.` : ""} ${fields.message ? `Additional info: ${fields.message}` : ""}`.trim(),
+  const waMessage = createWhatsAppUrl(
+    [
+      "Hi Nice Cleaning, I'd like to request a quote.",
+      `Name: ${fields.name}`,
+      `Phone: ${fields.phone}`,
+      fields.email && `Email: ${fields.email}`,
+      `Service: ${fields.service || "a cleaning service"}`,
+      fields.date && `Preferred date: ${fields.date}`,
+      fields.time && `Preferred time: ${fields.time}`,
+      fields.propertyType && `Property: ${fields.propertyType}`,
+      fields.rooms && `Rooms: ${fields.rooms}`,
+      fields.message && `Additional information: ${fields.message}`,
+    ]
+      .filter(Boolean)
+      .join("\n"),
   );
 
   if (submitted) {
     return (
       <div className="bg-white rounded-2xl border border-charcoal/8 p-8 sm:p-12 text-center">
-        <div className="w-16 h-16 rounded-full bg-accent-sage/15 flex items-center justify-center mx-auto mb-5">
-          <CheckCircle size={32} className="text-accent-sage" />
+        <div className="w-16 h-16 rounded-full bg-brand-teal/15 flex items-center justify-center mx-auto mb-5">
+          <CheckCircle size={32} className="text-brand-teal" />
         </div>
         <h2 className="font-display text-2xl sm:text-3xl font-medium text-charcoal mb-3">
           Enquiry Prepared!
         </h2>
         <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-2 max-w-md mx-auto">
-          Thank you, <strong>{fields.name}</strong>! Your enquiry has been
-          prepared. Sparkle & Clean can review your requirements and contact you
-          using your preferred method.
+          Thank you, <strong>{fields.name}</strong>! This demo form has not sent
+          your details automatically. Continue to WhatsApp to send your enquiry
+          to Nice Cleaning.
         </p>
         <p className="font-sans text-sm text-charcoal/50 mb-8">
           You selected:{" "}
@@ -107,7 +118,7 @@ export default function QuoteForm() {
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <a
-            href={`https://wa.me/447715533186?text=${waMessage}`}
+            href={waMessage}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp justify-center"
@@ -293,7 +304,7 @@ export default function QuoteForm() {
               name="propertyType"
               value={fields.propertyType}
               onChange={handleChange}
-              placeholder="e.g. 3-bed house, flat, car..."
+              placeholder="e.g. 3-bedroom house or flat"
               className="input-field"
             />
           </div>
@@ -327,11 +338,7 @@ export default function QuoteForm() {
               className="input-field"
             >
               <option value="">Select a time</option>
-              {timeOptions.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
-              ))}
+              <option value="Flexible">Flexible</option>
             </select>
           </div>
 
@@ -363,7 +370,7 @@ export default function QuoteForm() {
             value={fields.message}
             onChange={handleChange}
             rows={4}
-            placeholder="Please share any specific requirements, areas of focus, or questions you have for Sparkle & Clean..."
+            placeholder="Please share your cleaning requirements or any questions for Nice Cleaning..."
             className="input-field resize-none"
           />
         </div>
@@ -377,8 +384,8 @@ export default function QuoteForm() {
           Photos (Optional)
         </h2>
         <p className="font-sans text-sm text-charcoal/55 mb-4">
-          You can share up to 5 photos of the area or item to be cleaned. This
-          helps with quoting for oven, car, end-of-tenancy or move-in cleaning.
+          You can select up to 5 photos here. This demo form does not send the
+          files; attach them directly when you continue in WhatsApp.
         </p>
 
         <input
@@ -395,7 +402,7 @@ export default function QuoteForm() {
         <button
           type="button"
           onClick={() => fileRef.current?.click()}
-          className="flex items-center gap-2.5 px-5 py-3 border-2 border-dashed border-charcoal/20 rounded-xl text-sm font-medium text-charcoal/60 hover:border-accent-blue/50 hover:text-accent-blue hover:bg-skyblue-100/30 transition-colors duration-150 w-full justify-center focus:outline-none focus:ring-2 focus:ring-accent-blue/40"
+          className="flex items-center gap-2.5 px-5 py-3 border-2 border-dashed border-charcoal/20 rounded-xl text-sm font-medium text-charcoal/60 hover:border-brand-purple/50 hover:text-brand-purple hover:bg-brand-teal-light/30 transition-colors duration-150 w-full justify-center focus:outline-none focus:ring-2 focus:ring-brand-purple/40"
         >
           <Upload size={16} />
           {files.length === 0
@@ -408,7 +415,7 @@ export default function QuoteForm() {
             {files.map((file, i) => (
               <li
                 key={i}
-                className="flex items-center justify-between gap-2 bg-skyblue-100/50 rounded-lg px-3 py-2"
+                className="flex items-center justify-between gap-2 bg-brand-teal-light/50 rounded-lg px-3 py-2"
               >
                 <span className="text-sm text-charcoal/70 font-sans truncate">
                   {file.name}
@@ -432,10 +439,20 @@ export default function QuoteForm() {
           type="submit"
           className="btn-primary w-full justify-center py-4 text-base"
         >
-          Submit Enquiry
+          Prepare Enquiry
         </button>
+        <a
+          href={createWhatsAppUrl()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-whatsapp mt-3 w-full justify-center"
+        >
+          <MessageCircle size={16} />
+          Message us on WhatsApp
+        </a>
         <p className="mt-3 text-xs text-center text-charcoal/40 font-sans">
-          This is a demo form. No data is sent to a server.
+          This demo form does not send or store your details. Continue via
+          WhatsApp to send your enquiry.
         </p>
       </div>
     </form>

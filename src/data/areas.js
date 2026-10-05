@@ -1,30 +1,32 @@
 export const areas = [
   {
-    id: "armagh",
-    name: "Armagh",
-    description:
-      "Our local home base, with friendly and dependable cleaning throughout Armagh.",
+    id: "newport",
+    name: "Newport",
+    description: "Local home cleaning across Newport, Gwent.",
     isMain: true,
   },
   {
-    id: "newry",
-    name: "Newry",
-    description:
-      "Professional cleaning for homes across Newry and nearby neighbourhoods.",
+    id: "bassaleg",
+    name: "Bassaleg",
+    description: "Friendly home cleaning in Bassaleg.",
     isMain: false,
   },
   {
-    id: "portadown",
-    name: "Portadown",
-    description:
-      "Reliable cleaning support for homes and living spaces in Portadown.",
+    id: "langstone",
+    name: "Langstone",
+    description: "Professional home cleaning in Langstone.",
     isMain: false,
   },
   {
-    id: "benburb",
-    name: "Benburb",
-    description:
-      "Friendly, local cleaning service for homes across Benburb and surrounding areas.",
+    id: "risca",
+    name: "Risca",
+    description: "Reliable local home cleaning in Risca.",
+    isMain: false,
+  },
+  {
+    id: "rogerstone",
+    name: "Rogerstone",
+    description: "Nice Cleaning serves homes in Rogerstone.",
     isMain: false,
   },
 ];

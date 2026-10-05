@@ -5,18 +5,24 @@ export default {
     extend: {
       colors: {
         brand: {
-          pink: "#E83F82",
-          "pink-light": "#FFF4F8",
-          "pink-dark": "#C92F69",
-          blush: "#FFF8FB",
-          dark: "#C92F69",
+          purple: "#5A2A91",
+          "purple-dark": "#35205F",
+          "purple-light": "#F3EAF9",
+          teal: "#20B7B0",
+          "teal-light": "#DDF6F4",
+          coral: "#E85A7A",
+          yellow: "#F4C542",
+          cream: "#FFF9F4",
+          dark: "#1E1A2B",
         },
-        blush: "#FFF4F8",
-        soft: "#FFF8FB",
-        dark: "#171717",
+        soft: "#FFF9F4",
+        cream: "#FFF9F4",
+        dark: "#1E1A2B",
+        charcoal: "#1E1A2B",
+        "charcoal-dark": "#35205F",
         white: "#FFFFFF",
-        border: "#F1D9E3",
-        muted: "#555555",
+        border: "#E9DDEB",
+        muted: "#625D68",
       },
       fontFamily: {
         sans: ['"DM Sans"', "sans-serif"],
@@ -24,7 +30,7 @@ export default {
         script: ['"Great Vibes"', "cursive"],
       },
       boxShadow: {
-        soft: "0 18px 40px rgba(232, 63, 130, 0.08)",
+        soft: "0 18px 40px rgba(90, 42, 145, 0.10)",
       },
       animation: {
         "slide-in": "slideIn 0.3s ease-out",

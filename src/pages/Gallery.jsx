@@ -10,7 +10,7 @@ import GalleryGrid from "../components/gallery/GalleryGrid";
 export default function Gallery() {
   return (
     <>
-      <title>Gallery & Portfolio | Sparkle & Clean</title>
+      <title>Gallery | Nice Cleaning</title>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -19,11 +19,11 @@ export default function Gallery() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumb items={[{ label: "Gallery" }]} />
             <div className="mt-6 max-w-2xl">
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 font-sans">
+              <p className="text-xs font-semibold tracking-widest uppercase text-brand-purple mb-3 font-sans">
                 Our Work Portfolio
               </p>
               <h1 className="font-display text-4xl sm:text-5xl font-medium text-charcoal mb-4 leading-tight">
-                See the Sparkle & Clean Finish
+                See the Difference
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed">
                 Take a look at our recent cleaning work across regular home

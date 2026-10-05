@@ -1,29 +1,28 @@
-import { Home, Sparkles, Droplets, Wind, Check } from "lucide-react";
+import { Home, Sparkles, Check } from "lucide-react";
 
 export const services = [
   {
-    id: "regular-cleans",
-    title: "Regular Cleans",
+    id: "house-cleans",
+    title: "House Cleans",
     shortDescription:
-      "Reliable regular cleaning to keep your home fresh, tidy and beautifully maintained.",
+      "Reliable home cleaning designed to make everyday life easier.",
     description:
-      "A consistent clean keeps life running smoothly. Sparkle & Clean offers regular home cleaning tailored to your routine, so your home feels cared for, comfortable and beautifully maintained every week or fortnight.",
+      "Reliable home cleaning designed to make everyday life easier. Nice Cleaning takes care of the chores so you can enjoy a fresher, more comfortable home.",
     icon: "Home",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=85",
+    image: "/photo/House%20Cleans.png",
     suitableFor: [
+      "Regular home upkeep",
       "Busy households",
-      "Weekly upkeep",
-      "Routine freshness",
-      "Comfortable home living",
+      "Keeping your home fresh",
+      "Taking the pressure off everyday chores",
     ],
     benefits: [
-      "Consistent, reliable visits",
-      "Attention to detail",
-      "Friendly local service",
-      "A home that feels calm and cared for",
+      "Reliable local service",
+      "Careful attention to detail",
+      "Professional finish",
+      "More time for you",
     ],
-    accent: "pink",
+    accent: "purple",
     price: "Get a Quote",
     priceNote: "Tailored to your home",
   },
@@ -34,105 +33,50 @@ export const services = [
     shortDescription:
       "A detailed top-to-bottom clean focused on the areas that need extra attention.",
     description:
-      "Deep cleaning gives your home a reset. Sparkle & Clean focuses on the details that need a little more care, from corners and edges to taps, fittings, woodwork, skirting boards and overlooked spots.",
+      "A detailed clean for homes that need extra attention. Nice Cleaning works through the areas that are often overlooked to leave your home feeling fresh, cared for and thoroughly cleaned.",
     icon: "Sparkles",
-    image:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=85",
+    image: "/photo/Deep%20Cleans.png",
     suitableFor: [
       "Seasonal refresh",
-      "Busy homes",
-      "Move-in or reset cleans",
       "Homes needing extra attention",
+      "A full reset",
+      "Before or after important occasions",
     ],
     benefits: [
-      "Detailed, top-to-bottom finish",
-      "Freshens overlooked areas",
-      "Perfect for a reset",
-      "Careful, thorough approach",
+      "Detailed cleaning",
+      "Attention to overlooked areas",
+      "Thorough finish",
+      "Professional approach",
     ],
-    accent: "pink",
+    accent: "teal",
     price: "Get a Quote",
     priceNote: "Personalised service",
   },
 
   {
-    id: "one-off-cleans",
-    title: "One-Off Cleans",
+    id: "end-of-tenancy-cleans",
+    title: "End of Tenancy Cleans",
     shortDescription:
-      "Perfect when your home needs a full reset, a refresh or a little extra help.",
+      "Thorough end of tenancy cleaning designed to help leave a property clean, fresh and ready for its next chapter.",
     description:
-      "Life gets busy, and sometimes a home just needs a proper reset. A one-off clean is ideal for special occasions, busy weeks, or simply getting your space back to feeling fresh and welcoming again.",
+      "Thorough end of tenancy cleaning designed to help leave a property clean, fresh and ready for its next chapter.",
     icon: "Check",
-    image:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1200&q=85",
+    image: "/photo/End%20of%20Tenancy%20Cleans.png",
     suitableFor: [
-      "Before guests",
-      "Busy weeks",
-      "Refresh after events",
-      "When time is short",
+      "End of tenancy",
+      "Rental property handover",
+      "Moving out",
+      "Preparing a property for inspection",
     ],
     benefits: [
-      "Flexible and convenient",
-      "Fresh start feeling",
-      "Thoughtful, thorough finish",
-      "Professional care",
-    ],
-    accent: "pink",
-    price: "Get a Quote",
-    priceNote: "Flexible bookings",
-  },
-
-  {
-    id: "fridge-freezer-cleaning",
-    title: "Fridge & Freezer Cleaning",
-    shortDescription:
-      "Freshen up your fridge or freezer with a detailed clean designed to leave it hygienic and sparkling.",
-    description:
-      "Fridges and freezers need a little extra attention to stay fresh and hygienic. Sparkle & Clean offers a focused clean that leaves your appliances cleaner, brighter and more pleasant to use.",
-    icon: "Droplets",
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    suitableFor: [
-      "Family kitchens",
-      "Spring refresh",
-      "Busy appliances",
-      "Fresh home upkeep",
-    ],
-    benefits: [
-      "Hygienic finish",
-      "Fresh, clean feel",
-      "Attention to detail",
-      "Thoughtful appliance care",
-    ],
-    accent: "pink",
-    price: "Get a Quote",
-    priceNote: "Just ask",
-  },
-
-  {
-    id: "window-cleaning",
-    title: "Window Cleaning",
-    shortDescription: "Crystal-clear windows and a fresh finish for your home.",
-    description:
-      "Windows can make a huge difference to the feel of a home. Sparkle & Clean brings a fresh, polished finish to your windows and frames, helping your space feel brighter and more welcoming.",
-    icon: "Wind",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=85",
-    suitableFor: [
-      "Brightening rooms",
-      "Seasonal freshen-up",
-      "Homes with lots of glass",
-      "A polished finish",
-    ],
-    benefits: [
-      "Fresh, brighter look",
-      "Clean frames and glass",
+      "Thorough property clean",
       "Professional finish",
-      "Welcoming atmosphere",
+      "Attention to detail",
+      "Tailored to the property",
     ],
-    accent: "pink",
+    accent: "coral",
     price: "Get a Quote",
-    priceNote: "Message us",
+    priceNote: "Quote based on the property",
   },
 ];
 
@@ -140,6 +84,4 @@ export const serviceIcons = {
   Home,
   Sparkles,
   Check,
-  Droplets,
-  Wind,
 };

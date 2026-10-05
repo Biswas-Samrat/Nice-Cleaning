@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { X } from "lucide-react";
 import { useBodyScrollLock } from "../../hooks/useBodyScrollLock";
 import Logo from "./Logo";
+import { createWhatsAppUrl } from "../../data/contact";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -81,8 +82,8 @@ export default function MobileMenu({ isOpen, onClose }) {
                 onClick={onClose}
                 className={`flex items-center px-5 py-3.5 font-sans font-medium text-base transition-colors duration-150 ${
                   isActive
-                    ? "text-accent-blue bg-skyblue-100 border-r-2 border-accent-blue"
-                    : "text-charcoal hover:text-accent-blue hover:bg-charcoal/4"
+                    ? "text-brand-purple bg-brand-teal-light border-r-2 border-brand-purple"
+                    : "text-charcoal hover:text-brand-purple hover:bg-charcoal/4"
                 }`}
               >
                 {link.label}
@@ -101,7 +102,7 @@ export default function MobileMenu({ isOpen, onClose }) {
             Request a Quote
           </Link>
           <a
-            href="https://wa.me/447715533186?text=Hi%20Sparkle%20%26%20Clean%2C%20I%27d%20like%20to%20enquire%20about%20a%20cleaning%20service."
+            href={createWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp w-full justify-center"
